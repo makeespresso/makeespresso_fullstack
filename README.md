@@ -38,7 +38,7 @@ Makeespresso
 
 * Users can register an account, log in and log out 
 * Users can find specialty coffee by Type of grain and origin
-* Users can see which type of coffee shops have
+* Users can see which kind of coffee the shops have
 * Also, can see information of shops such as: location, operation hours, address and website
 * Registered users can post, update and delete comments under coffee types for a review.
 
@@ -49,11 +49,14 @@ Makeespresso
 * Google Maps API for stores location
 * Users can find recipies of expresso based berverages 
 * Weekly newsletter
+* Users can accept if they are interested in recieving a weekly newsletter using action mailer
+
 
 ### App Features
 * Users can register an account on the site
 * Mobile Responsive
-* Users can accept if they are interested in recieve a weekly newsletter 
+* Users can accept if they are interested in recieving a weekly newsletter 
+
 
 ## ERD
 
@@ -62,7 +65,8 @@ Makeespresso
 | Can be found in mulitple shops     | Can have multiple types of coffee | Can post, edit and delete reviews |
 
 
-<img width="412" alt="Screen Shot 2019-08-11 at 6 10 53 PM" src="https://user-images.githubusercontent.com/20978259/62840131-89ba8f80-bc63-11e9-825d-e31f7274b6de.png">
+![erd makeespresso Diagram](https://user-images.githubusercontent.com/20978259/62840473-87f3ca80-bc69-11e9-8021-a6f6a92049bb.png)
+
 
 ## API Endpoint Documentation
 
