@@ -1,11 +1,11 @@
-## Makeespresso
+## Project 4
+
+### Makeespresso
+
 ![Makeespresso logo](https://images.unsplash.com/photo-1506619216599-9d16d0903dfd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2098&q=80)
 
 **General Assembly - Software Engineering Immersive** 
 
-
-
-## Project 4
 
 **About** This  is a Full Stack Web Application:
 
@@ -59,7 +59,7 @@ Makeespresso
 
 | Coffee | Shops  | Users |
 |:-------------: |:---------------:| :-------------:|
-| can be found in mulitple shops     | Can have multiple types of coffee | Can post, edit and delete reviews |
+| Can be found in mulitple shops     | Can have multiple types of coffee | Can post, edit and delete reviews |
 
 
 <img width="412" alt="Screen Shot 2019-08-11 at 6 10 53 PM" src="https://user-images.githubusercontent.com/20978259/62840131-89ba8f80-bc63-11e9-825d-e31f7274b6de.png">
@@ -84,8 +84,3 @@ Content Cell  | Content Cell
 * buttons from [Ant Design](https://ant.design "Ant Design")
 * Icons from [Icons8](https://icons8.com "Icons8")
 * Fonts from [Google Fonts](https://fonts.google.com "Google Fonts")
-
-
-
-
-
