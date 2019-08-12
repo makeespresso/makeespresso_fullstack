@@ -46,9 +46,10 @@ Makeespresso
 * Weekly newsletter
 * Stores show inventroy
 * Users can save to favorites
-* Google Maps API for stores location
 * Users can find recipies of expresso based berverages 
 * Users can accept if they are interested in recieving a weekly newsletter using action mailer
+* Users can add their picture profile
+* Firebase API to strorge user's images
 
 
 ### App Features
