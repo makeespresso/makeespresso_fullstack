@@ -29,7 +29,7 @@
 
 makeespresso
 
-**Description** Makeespresso is an application that allows coffee lovers to know more about Specialty Coffee within the New York city providing information about the characteristics of the grains and also the stores that sell this product with the purspose of supporting local framers and roasters.
+**Description** Makeespresso is an application that allows coffee lovers to know more about Specialty Coffee within the New York City imported from different regions, providing information about the characteristics of the grains and also the stores that sell this product with the purspose of supporting local framers and roasters.
 
 ![toastColors](https://user-images.githubusercontent.com/20978259/62839078-41937100-bc53-11e9-8f43-6a91e5f27ae2.jpeg)
 
@@ -58,6 +58,17 @@ makeespresso
 * Users can accept if they are interested in recieving a weekly newsletter 
 * User can see information of shops such as: location, operation hours, address and website
 
+### Components preview
+
+`<App >
+  <nav />
+  <registrationForm / >
+  <landingPage />
+  <about />
+  <coffeePage />
+  <storesPage />
+</App>
+`
 
 ## ERD
 
