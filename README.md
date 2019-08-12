@@ -82,6 +82,19 @@ Content Cell  | Content Cell
 
 <img width="1093" alt="landing_page" src="https://user-images.githubusercontent.com/20978259/62839035-a9958780-bc52-11e9-9611-686de19ae55c.png">
 
+##### Coffee page
+
+<img width="1093" alt="coffee_page" src="https://user-images.githubusercontent.com/20978259/62843408-94871b80-bc87-11e9-9b4d-3167cf6f1e76.png">
+
+##### History page
+
+<img width="1093" alt="history_page" src="https://user-images.githubusercontent.com/20978259/62843650-6efb1180-bc89-11e9-9fd0-723491ba38a2.png">
+
+##### Register page
+
+<img width="1093" alt="register_page" src="https://user-images.githubusercontent.com/20978259/62843723-17a97100-bc8a-11e9-8219-515300f7c27a.png">
+
+
 ## Credits
 
 * Images stock from [Unsplash ](https://unsplash.com "Unsplash")
