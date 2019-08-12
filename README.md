@@ -6,6 +6,15 @@
 
 **General Assembly - Software Engineering Immersive** 
 
+## Set Up
+
+* Fork and clone this repo
+* cd into the app directory
+* For back-end make sure you have the latest Rails version 5.0.3
+* Run `rails S` to run the server
+* For front-end, cd into the client directory
+* Run `run npm i` to install dependencies
+* Run `npm start` and allow the client server to run on an available port
 
 **About** This  is a Full Stack Web Application:
 
@@ -24,15 +33,6 @@ Makeespresso
 
 ![toastColors](https://user-images.githubusercontent.com/20978259/62839078-41937100-bc53-11e9-8f43-6a91e5f27ae2.jpeg)
 
-## Set Up
-
-* Fork and clone this repo
-* cd into the app directory
-* For back-end make sure you have the latest Rails version 5.0.3
-* Run `rails S` to run the server
-* For front-end, cd into the client directory
-* Run `run npm i` to install dependencies
-* Run `npm start` and allow the client server to run on an available port
 
 ## MVP
 
@@ -99,6 +99,14 @@ coffee/all  | shows all the coffee available in the platform
 
 <img width="1093" alt="register_page" src="https://user-images.githubusercontent.com/20978259/62843723-17a97100-bc8a-11e9-8219-515300f7c27a.png">
 
+## Timeline
+
+* 08/12/19 - Backend set up
+* 08/13/19 - Front end API
+* 08/14/19 - Front end distrubution
+* 08/15/19 - CSS Design and responsiveness
+* 08/16/19 - Review and Deployment
+* 08/17/20 - Presentation
 
 ## Credits
 
