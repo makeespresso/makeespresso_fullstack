@@ -72,8 +72,8 @@ Makeespresso
 
 Get  | Description
 ------------- | -------------
-Content Cell  | Content Cell
-Content Cell  | Content Cell
+coffee/all  | shows all the coffee available in the platform
+
 
 
 ## Wireframes
