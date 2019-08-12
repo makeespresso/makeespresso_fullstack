@@ -60,7 +60,7 @@ makeespresso
 
 ### Components preview
 
-`<App >
+```<App >
   <nav />
   <registrationForm / >
   <landingPage />
@@ -68,7 +68,7 @@ makeespresso
   <coffeePage />
   <storesPage />
 </App>
-`
+```
 
 ## ERD
 
