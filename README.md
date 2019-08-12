@@ -25,7 +25,7 @@
 * Mobile first
 * Deployed App using Surge/Heroku
 
-### Project Name** 
+### Project Name
 
 makeespresso
 
@@ -60,6 +60,20 @@ Makeespresso is an application that allows coffee lovers to learn more about Spe
 * Users can accept if they are interested in recieving a weekly newsletter 
 * User can see information of shops such as: location, operation hours, address and website
 
+### User Journey 
+
+![user_journey](https://user-images.githubusercontent.com/20978259/62871777-190a8600-bcea-11e9-90c7-11f76f40ec27.jpeg)
+
+Lola is a writer and coffee enthusiast and she's always looking for small, local and cozy coffee shops around the New York City area. She usually goes to coffee shops once every other week, brings her computer, asks for her latte and works on her writing.
+
+User: 
+
+* Lola can create can register and log in into the platform.
+* Lola can browse coffee shops finding it's location, operation hours.
+* Lola can learn more about the coffee characteristics that this shops provide
+* Lola can find the type of coffee is selling
+
+* Lola can log out
 ### Components preview
 
 ```<App >
