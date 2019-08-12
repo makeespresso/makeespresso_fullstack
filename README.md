@@ -1,6 +1,6 @@
 ## Project 4
 
-### Makeespresso
+#### Makeespresso
 
 ![Makeespresso logo](https://images.unsplash.com/photo-1506619216599-9d16d0903dfd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2098&q=80)
 
@@ -16,7 +16,7 @@
 * Run `run npm i` to install dependencies
 * Run `npm start` and allow the client server to run on an available port
 
-**About** This  is a Full Stack Web Application:
+## This  is a Full Stack Web Application:
 
 * Consuming a JSON API
 * Back-end using Rails
@@ -25,9 +25,9 @@
 * Mobile first
 * Deployed App using Surge/Heroku
 
-**Project Name** 
+### Project Name** 
 
-Makeespresso
+makeespresso
 
 **Description** Makeespresso is an application that allows coffee lovers to know more about Specialty Coffee within the New York city providing information about the characteristics of the grains and also the stores that sell this product with the purspose of supporting local framers and roasters.
 
