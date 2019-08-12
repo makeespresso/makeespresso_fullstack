@@ -86,6 +86,11 @@ Content Cell  | Content Cell
 
 <img width="1093" alt="coffee_page" src="https://user-images.githubusercontent.com/20978259/62843408-94871b80-bc87-11e9-9b4d-3167cf6f1e76.png">
 
+##### Product Detail page
+
+<img width="1093" alt="product_detail_page" src="https://user-images.githubusercontent.com/20978259/62843883-4e33bb80-bc8b-11e9-9658-963d5e3a6baa.png">
+
+
 ##### History page
 
 <img width="1093" alt="history_page" src="https://user-images.githubusercontent.com/20978259/62843650-6efb1180-bc89-11e9-9fd0-723491ba38a2.png">
