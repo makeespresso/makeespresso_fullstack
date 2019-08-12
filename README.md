@@ -27,35 +27,35 @@ Makeespresso
 ## Set Up
 
 * Fork and clone this repo
-* Cd into the app directory
-* For back end make sure you have the latest Rails version 5.0.3
+* cd into the app directory
+* For back-end make sure you have the latest Rails version 5.0.3
 * Run `rails S` to run the server
-* For front end in the working directory `run npm i`
-* Cd into the client directory
+* For front-end, cd into the client directory
+* Run `run npm i` to install dependencies
 * Run `npm start` and allow the client server to run on an available port
 
 ## MVP
 
 * Users can register an account, log in and log out 
-* Users can find specialty coffee by Type of grain and origin
 * Users can see which kind of coffee the shops have
-* Also, can see information of shops such as: location, operation hours, address and website
+* Users can find specialty coffee by Type of grain and origin
 * Registered users can post, update and delete comments under coffee types for a review.
 
 ### Post-MVP
 
+* Weekly newsletter
 * Stores show inventroy
 * Users can save to favorites
 * Google Maps API for stores location
 * Users can find recipies of expresso based berverages 
-* Weekly newsletter
 * Users can accept if they are interested in recieving a weekly newsletter using action mailer
 
 
 ### App Features
-* Users can register an account on the site
 * Mobile Responsive
+* Users can register an account on the site
 * Users can accept if they are interested in recieving a weekly newsletter 
+* User can see information of shops such as: location, operation hours, address and website
 
 
 ## ERD
