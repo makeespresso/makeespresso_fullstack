@@ -107,7 +107,7 @@ coffee/all  | shows all the coffee available in the platform
 * 08/14/19 - Front end distrubution
 * 08/15/19 - CSS Design and responsiveness
 * 08/16/19 - Review and Deployment
-* 08/17/20 - Presentation
+* 08/17/19 - Presentation
 
 ## Credits
 
