@@ -25,8 +25,8 @@ class App extends Component {
     this.state = {
       products: [],
       productForm: {
-        name: "",
-        photo: ""
+
+
       },
       currentUser: null,
       authFormData: {
@@ -114,9 +114,9 @@ class App extends Component {
     console.log('hello')
     const userData = await loginUser(this.state.authFormData);
     this.setState({
-      currentUser: decode(userData.token)
+      currentUser: decode(userData)
     })
-    localStorage.setItem("jwt", userData.token);
+    localStorage.setItem("jwt", userData);
     this.props.history.push('/');
   }
 

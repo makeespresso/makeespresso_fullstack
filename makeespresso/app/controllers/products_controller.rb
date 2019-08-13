@@ -3,7 +3,7 @@ class ProductsController < ApplicationController
   before_action :authorize_request, except: %i[index show]
 
   def index
-    @products = product.order(:id)
+    @products = Product.all
     render json: @products
   end
 
@@ -43,6 +43,6 @@ class ProductsController < ApplicationController
 
   # Only allow a trusted parameter "white list" through.
   def product_params
-    params.require(:product).permit(:name, :photo)
+    params.require(:product).permit(:image, :beanType, :geography, :altura, :toast, :aroma, :body, :acidity)
   end
 end

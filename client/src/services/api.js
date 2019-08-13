@@ -7,17 +7,17 @@ const api = axios.create({
   baseURL: baseUrl
 })
 
-// export const getToken = () => {
-//   const token = localStorage.getItem('jwt');
-//   api.defaults.headers.common.authorization = `Bearer ${token}`;
-// }
+export const getToken = () => {
+  const token = localStorage.getItem('jwt');
+  api.defaults.headers.common.authorization = `Bearer ${token}`;
+}
 
 export const loginUser = async (loginData) => {
   const resp = await api.post('/auth/login', loginData);
   localStorage.setItem('authToken', resp.data.token);
   api.defaults.headers.common.authorization = `Bearer ${resp.data.token}`
   console.log(resp);
-  return resp.data.user
+  return resp.data.token
 }
 
 export const registerUser = async (registerData) => {
@@ -26,7 +26,7 @@ export const registerUser = async (registerData) => {
 }
 
 const createProduct = async (data) => {
-  // getToken();
+  getToken();
   const resp = await api.post('/products', { product: data });
   return resp.data;
 }
@@ -37,13 +37,13 @@ const readAllProducts = async () => {
 }
 
 const updateProduct = async (id, data) => {
-  // getToken();
+  getToken();
   const resp = await api.put(`/products/${id}`, { product: data });
   return resp.data;
 }
 
 const destroyProduct = async (id) => {
-  // getToken();
+  getToken();
   const resp = await api.delete(`/products/${id}`);
   return resp.data;
 }
