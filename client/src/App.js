@@ -9,6 +9,7 @@ import ProductPage from './components/ProductPage';
 import CreateProduct from './components/CreateProduct';
 import Login from './components/Login';
 import Register from './components/Register';
+import Profile from './components/Profile';
 
 import {
   createProduct,
@@ -16,7 +17,8 @@ import {
   updateProduct,
   destroyProduct,
   loginUser,
-  registerUser
+  registerUser,
+  readUserProducts
 } from './services/api'
 
 class App extends Component {
@@ -54,6 +56,16 @@ class App extends Component {
     this.setState({
       products
     })
+  }
+
+  getUserProducts = async (id) => {
+    const products = await readUserProducts(id);
+    console.log(products)
+    this.setState({
+      products
+    })
+    console.log(this.state)
+    return products
   }
 
   newProduct = async (e) => {
@@ -117,7 +129,7 @@ class App extends Component {
       currentUser: decode(userData)
     })
     localStorage.setItem("jwt", userData);
-    this.props.history.push('/');
+    this.props.history.push('/profile');
   }
 
   handleRegister = async (e) => {
@@ -131,6 +143,8 @@ class App extends Component {
     this.setState({
       currentUser: null
     })
+
+    this.props.history.push('/');
   }
 
   authHandleChange = (e) => {
@@ -146,7 +160,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <section>
+        <section className='navbar'>
           <h1><Link to='/' onClick={() => this.setState({
             productForm: {
               name: "",
@@ -157,7 +171,7 @@ class App extends Component {
             {this.state.currentUser
               ?
               <>
-                <p>{this.state.currentUser.username}</p>
+                <small>{this.state.currentUser.username}</small>
                 <button onClick={this.handleLogout}>logout</button>
               </>
               :
@@ -165,48 +179,57 @@ class App extends Component {
             }
           </div>
         </section>
-        <Route exact path="/login" render={() => (
-          <Login
-            handleLogin={this.handleLogin}
-            handleChange={this.authHandleChange}
-            formData={this.state.authFormData} />)} />
-        <Route exact path="/register" render={() => (
-          <Register
-            handleRegister={this.handleRegister}
-            handleChange={this.authHandleChange}
-            formData={this.state.authFormData} />)} />
-        <Route exact path="/" render={() => (
-          <ProductsView
-            products={this.state.products}
-            productForm={this.state.productForm}
-            handleFormChange={this.handleFormChange}
-            newProduct={this.newProduct}
+        <section className="container">
+          <Route exact path="/login" render={() => (
+            <Login
+              handleLogin={this.handleLogin}
+              handleChange={this.authHandleChange}
+              formData={this.state.authFormData} />)} />
+          <Route exact path="/register" render={() => (
+            <Register
+              handleRegister={this.handleRegister}
+              handleChange={this.authHandleChange}
+              formData={this.state.authFormData} />)} />
+          <Route exact path="/profile" render={() => (
+            <ProductsView
+              products={this.state.products}
+              productForm={this.state.productForm}
+              handleFormChange={this.handleFormChange}
+              newProduct={this.newProduct}
+            />
+          )}
           />
-        )}
-        />
-        <Route
-          path="/new/product"
-          render={() => (
-            <CreateProduct
-              handleFormChange={this.handleFormChange}
-              productForm={this.state.productForm}
-              newProduct={this.newProduct} />
-          )} />
-        <Route
-          path="/products/:id"
-          render={(props) => {
-            const { id } = props.match.params;
-            const product = this.state.products.find(el => el.id === parseInt(id));
-            return <ProductPage
-              id={id}
-              product={product}
-              handleFormChange={this.handleFormChange}
-              mountEditForm={this.mountEditForm}
-              editProduct={this.editProduct}
-              productForm={this.state.productForm}
-              deleteProduct={this.deleteProduct} />
-          }}
-        />
+          <Route
+            exact path="/new/product"
+            render={() => (
+              <CreateProduct
+                handleFormChange={this.handleFormChange}
+                productForm={this.state.productForm}
+                newProduct={this.newProduct} />
+            )} />
+          <Route
+            exact path="/products/:id"
+            render={(props) => {
+              const { id } = props.match.params;
+              const product = this.state.products.find(el => el.id === parseInt(id));
+              return <ProductPage
+                id={id}
+                product={product}
+                handleFormChange={this.handleFormChange}
+                mountEditForm={this.mountEditForm}
+                editProduct={this.editProduct}
+                productForm={this.state.productForm}
+                deleteProduct={this.deleteProduct} />
+            }}
+          />
+          <Route
+            exact path="/profile"
+            render={(props) => {
+              return <Profile
+                getUserProducts={this.getUserProducts} />
+            }}
+          />
+        </section>
       </div>
     );
   }

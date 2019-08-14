@@ -36,6 +36,11 @@ const readAllProducts = async () => {
   return resp.data;
 }
 
+const readUserProducts = async (userid) => {
+  const resp = await api.get(`/users/${userid}/products`);
+  return resp.data;
+}
+
 const updateProduct = async (id, data) => {
   getToken();
   const resp = await api.put(`/products/${id}`, { product: data });
@@ -52,5 +57,6 @@ export {
   createProduct,
   readAllProducts,
   updateProduct,
-  destroyProduct
+  destroyProduct,
+  readUserProducts
 }
