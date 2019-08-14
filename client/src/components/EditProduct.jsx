@@ -5,18 +5,18 @@ function EditProduct(props) {
   return (
     <div>
       <h3>Create a new product</h3>
-      <form onSubmit={props.handleSubmit}>
+      <form onSubmit={props.editProduct}>
         <p>Photo Link:</p>
         <input
           type="text"
-          name="photo"
+          name="image"
           value={props.productForm.photo}
           onChange={props.handleFormChange} />
         <p>Coffee:</p>
 
         <input
           type="text"
-          name="name"
+          name="geography"
           value={props.productForm.name}
           onChange={props.handleFormChange} />
         <button>Submit</button>

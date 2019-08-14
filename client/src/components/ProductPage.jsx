@@ -36,7 +36,8 @@ class ProductsView extends Component {
               )} />
               :
               <>
-                <h1>{product.name}</h1>
+                <h1>Product</h1>
+                <h1>{product.geography}</h1>
                 <button onClick={() => {
                   this.setState({
                     isEdit: true

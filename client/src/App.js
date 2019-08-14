@@ -20,6 +20,7 @@ import {
   registerUser,
   readUserProducts
 } from './services/api'
+import EditProduct from './components/EditProduct';
 
 class App extends Component {
   constructor(props) {
@@ -78,7 +79,7 @@ class App extends Component {
         photo: ""
       }
     }))
-    this.props.history.push('/');
+    this.props.history.push('/profile');
   }
 
   editProduct = async () => {
@@ -89,6 +90,7 @@ class App extends Component {
         products: prevState.products.map(product => product.id === productForm.id ? productForm : product),
       }
     ))
+    this.props.history.push('/profile');
   }
 
   deleteProduct = async (id) => {
@@ -96,6 +98,7 @@ class App extends Component {
     this.setState(prevState => ({
       products: prevState.products.filter(product => product.id !== id)
     }))
+    this.props.history.push('/profile');
   }
 
   handleFormChange = (e) => {
@@ -171,7 +174,7 @@ class App extends Component {
             {this.state.currentUser
               ?
               <>
-                <small>{this.state.currentUser.username}</small>
+                <small><Link to='/profile'>{this.state.currentUser.username}</Link></small>
                 <button onClick={this.handleLogout}>logout</button>
               </>
               :
@@ -227,6 +230,19 @@ class App extends Component {
             render={(props) => {
               return <Profile
                 getUserProducts={this.getUserProducts} />
+            }}
+          />
+          <Route
+            exact path="/products/:id/edit"
+            render={(props) => {
+              const { id } = props.match.params;
+              const product = this.state.products.find(el => el.id === parseInt(id));
+              return <EditProduct
+                handleFormChange={this.handleFormChange}
+                productForm={this.state.productForm}
+                product={product}
+                editProduct={this.editProduct}
+              />
             }}
           />
         </section>
