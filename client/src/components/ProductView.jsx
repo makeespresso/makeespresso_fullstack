@@ -12,9 +12,15 @@ function ProductsView(props) {
             props.history.push(`/products/${product.id}`);
             window.scrollTo(0, 0);
           }}>
-          <img alt={product.name} src={product.photo} />
+          <img alt={product.beanType} src={product.image} />
           <h3>
-            <p>{product.name}</p>
+            <p>{product.geography}</p>
+            <p>{product.altura}</p>
+            <p>{product.toast}</p>
+            <p>{product.toast}</p>
+            <p>{product.aroma}</p>
+            <p>{product.body}</p>
+            <p>{product.acidity}</p>
           </h3>
         </div>
       ))}
@@ -28,7 +34,7 @@ function ProductsView(props) {
           alt="Create a new product"
           src="https://image.flaticon.com/icons/png/512/14/14980.png"
           className="plus-sign" /> */}
-        <button>Create a new product</button>
+        <button>Create a new product HERE</button>
       </div>
     </div>
   )
