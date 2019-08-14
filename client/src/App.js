@@ -166,8 +166,8 @@ class App extends Component {
         <section className='navbar'>
           <h1><Link to='/' onClick={() => this.setState({
             productForm: {
-              name: "",
-              photo: ""
+              origin: "",
+              image: ""
             }
           })}>makeespresso</Link></h1>
           <div>

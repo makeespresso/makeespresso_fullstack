@@ -4,26 +4,6 @@ import { withRouter } from 'react-router';
 function ProductsView(props) {
   return (
     <div className="product-container">
-      {props.products.map(product => (
-        <div
-          key={product.id}
-          className="product-card"
-          onClick={(e) => {
-            props.history.push(`/products/${product.id}`);
-            window.scrollTo(0, 0);
-          }}>
-          <img alt={product.beanType} src={product.image} />
-          <h3>
-            <p>{product.geography}</p>
-            <p>{product.altura}</p>
-            <p>{product.toast}</p>
-            <p>{product.toast}</p>
-            <p>{product.aroma}</p>
-            <p>{product.body}</p>
-            <p>{product.acidity}</p>
-          </h3>
-        </div>
-      ))}
       <div
         className="product-card"
         onClick={() => {
@@ -36,6 +16,27 @@ function ProductsView(props) {
           className="plus-sign" /> */}
         <button>Create a new product HERE</button>
       </div>
+
+      {props.products.map(product => (
+        <div
+          key={product.id}
+          className="product-card"
+          onClick={(e) => {
+            props.history.push(`/products/${product.id}`);
+            window.scrollTo(0, 0);
+          }}>
+          <img alt={product.beanType} src={product.image} />
+          <h3>
+            <p>Origin: {product.geography}</p>
+            <p>Altitude: {product.altura}</p>
+            <p>Toast: {product.toast}</p>
+            <p>Aroma: {product.aroma}</p>
+            <p>Body: {product.body}</p>
+            <p>Acidity: {product.acidity}</p>
+          </h3>
+        </div>
+      ))}
+
     </div>
   )
 }

@@ -15,7 +15,6 @@
   position: static;
   top: 0;
   background-color: rgb(240,240,240);
-  z-index: 10;
 }
 
 .navbar h1, .navbar h2, .navbar h3, .navbar s, .navbar p,.navbar small, .navbar a{
@@ -24,7 +23,7 @@
 }
 
 .container {
-  background-color:rgb(229, 219, 204);
+  background-color: lightblue;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
