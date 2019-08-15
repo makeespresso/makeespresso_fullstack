@@ -171,20 +171,22 @@ class App extends Component {
               image: ""
             }
           })}>makeespresso</Link></h1>
+          <Link to='/board'><p>Board</p></Link>
           <div>
             {this.state.currentUser
               ?
               <>
                 <small>Hi, <Link to='/profile'>{this.state.currentUser.username}</Link></small>
+
                 <button onClick={this.handleLogout}>logout</button>
               </>
               :
               <button onClick={this.handleLoginButton}>Login/register</button>
             }
           </div>
-          <div>
-            <Link to='/board'><p>Board</p></Link>
-          </div>
+
+
+
         </section>
         <section className="container">
           <Route exact path="/login" render={() => (
@@ -203,7 +205,8 @@ class App extends Component {
             render={(props) => {
               return <Board
                 products={this.state.products}
-                getUserProducts={this.getUserProducts} />
+                getUserProducts={this.getUserProducts}
+                newProduct={this.newProduct} />
             }}
           />
 
@@ -212,7 +215,6 @@ class App extends Component {
               products={this.state.products}
               productForm={this.state.productForm}
               handleFormChange={this.handleFormChange}
-              newProduct={this.newProduct}
             />
           )}
           />
