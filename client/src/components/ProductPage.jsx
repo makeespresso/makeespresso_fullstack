@@ -36,18 +36,21 @@ class ProductsView extends Component {
               )} />
               :
               <>
-                <p>Edit product:</p>
+                {this.props.currentUser.user_id === product.user_id && <p>Edit product:</p>}
                 <p>{product.geography}</p>
-                <button onClick={() => {
-                  this.setState({
-                    isEdit: true
-                  })
-                  this.props.history.push(`/products/${product.id}/edit`)
-                }}>Edit</button>
-                <button onClick={() => {
-                  this.props.deleteProduct(product.id);
-                  this.props.history.push('/')
-                }}>Delete</button>
+                {this.props.currentUser.user_id === product.user_id &&
+                  <>
+                    <button onClick={() => {
+                      this.setState({
+                        isEdit: true
+                      })
+                      this.props.history.push(`/products/${product.id}/edit`)
+                    }}>Edit</button>
+                    <button onClick={() => {
+                      this.props.deleteProduct(product.id);
+                      this.props.history.push('/')
+                    }}>Delete</button>
+                  </>}
               </>
             }
           </div>)}

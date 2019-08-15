@@ -24,7 +24,7 @@ function ProductsView(props) {
           }}>
           <img className="product-image" alt={product.beanType} src={product.image} />
 
-          <p>Origin: {product.geography}</p>
+          <p>Origines: {product.geography}</p>
           <p>Altitude: {product.altura}</p>
           <p>Toast: {product.toast}</p>
           <p>Aroma: {product.aroma}</p>

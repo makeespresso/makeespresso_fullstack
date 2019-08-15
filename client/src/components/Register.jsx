@@ -5,8 +5,9 @@ const Register = (props) => {
 
   return (
     <div className="auth-section">
-      <h2>Sign Up!</h2>
-      <hr />
+      <h2>Register!</h2>
+      <p>New customer</p>
+      <p>Create an account to learn more from this coffee community</p>
       <form onSubmit={props.handleRegister} >
         <p>Username:</p>
         <input name="username" type="text" value={props.formData.username} onChange={props.handleChange} />

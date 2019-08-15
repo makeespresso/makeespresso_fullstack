@@ -24,6 +24,10 @@
   min-height: calc(100vh - 3rem); 
 }
 
+/* COMPONENT Home = */
+.hero-image{
+max-height: 55vh;
+}
 /* COMPONENT Login = login-page */
 .my-account-login-page{
 }

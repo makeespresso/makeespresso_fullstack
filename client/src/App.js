@@ -9,7 +9,7 @@ import ProductPage from './components/ProductPage';
 import CreateProduct from './components/CreateProduct';
 import Login from './components/Login';
 import Register from './components/Register';
-import Profile from './components/Profile';
+import Board from './components/Board';
 import Home from './components/Home';
 
 import {
@@ -175,12 +175,15 @@ class App extends Component {
             {this.state.currentUser
               ?
               <>
-                <small><Link to='/profile'>{this.state.currentUser.username}</Link></small>
+                <small>Hi, <Link to='/profile'>{this.state.currentUser.username}</Link></small>
                 <button onClick={this.handleLogout}>logout</button>
               </>
               :
               <button onClick={this.handleLoginButton}>Login/register</button>
             }
+          </div>
+          <div>
+            <Link to='/board'><p>Board</p></Link>
           </div>
         </section>
         <section className="container">
@@ -194,16 +197,17 @@ class App extends Component {
               handleRegister={this.handleRegister}
               handleChange={this.authHandleChange}
               formData={this.state.authFormData} />)} />
-          
+
           <Route
             exact path="/profile"
             render={(props) => {
-              return <Profile
+              return <Board
+                products={this.state.products}
                 getUserProducts={this.getUserProducts} />
             }}
           />
-          
-          <Route exact path="/profile" render={() => (
+
+          <Route exact path="/board" render={() => (
             <ProductsView
               products={this.state.products}
               productForm={this.state.productForm}
@@ -212,6 +216,19 @@ class App extends Component {
             />
           )}
           />
+
+          {/* <Route exact path="/profile" render={() => (
+            <ProductsView
+              products={this.state.products}
+              productForm={this.state.productForm}
+              handleFormChange={this.handleFormChange}
+              newProduct={this.newProduct}
+            />
+          )}
+          /> */}
+
+
+
           <Route
             exact path="/new/product"
             render={() => (
@@ -228,6 +245,7 @@ class App extends Component {
               return <ProductPage
                 id={id}
                 product={product}
+                currentUser={this.state.currentUser}
                 handleFormChange={this.handleFormChange}
                 mountEditForm={this.mountEditForm}
                 editProduct={this.editProduct}
@@ -235,7 +253,7 @@ class App extends Component {
                 deleteProduct={this.deleteProduct} />
             }}
           />
-          
+
           <Route
             exact path="/"
             render={Home}
