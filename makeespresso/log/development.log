@@ -24857,3 +24857,115 @@ Processing by ProductsController#index as HTML
 Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.4ms)
 
 
+Started GET "/users/2/products" for ::1 at 2019-08-15 09:38:19 -0400
+Started GET "/products" for ::1 at 2019-08-15 09:38:19 -0400
+Processing by ProductsController#index as HTML
+Processing by ProductsController#index as HTML
+  Parameters: {"user_id"=>"2"}
+  [1m[36mProduct Load (1.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:7
+  [1m[36mProduct Load (1.6ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+Completed 200 OK in 11ms (Views: 7.0ms | ActiveRecord: 1.3ms)
+
+
+  ↳ app/controllers/products_controller.rb:7
+Completed 200 OK in 9ms (Views: 7.0ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/users/2/products" for ::1 at 2019-08-15 09:39:17 -0400
+Processing by ProductsController#index as HTML
+  Parameters: {"user_id"=>"2"}
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:7
+Completed 200 OK in 4ms (Views: 2.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/products" for ::1 at 2019-08-15 09:39:18 -0400
+Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:7
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/2/products" for ::1 at 2019-08-15 09:39:58 -0400
+Processing by ProductsController#index as HTML
+  Parameters: {"user_id"=>"2"}
+  [1m[36mProduct Load (0.6ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:7
+Completed 200 OK in 4ms (Views: 3.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/products" for ::1 at 2019-08-15 09:40:07 -0400
+Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:7
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/products" for ::1 at 2019-08-15 09:40:27 -0400
+Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:7
+Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/2/products" for ::1 at 2019-08-15 09:40:33 -0400
+Processing by ProductsController#index as HTML
+  Parameters: {"user_id"=>"2"}
+  [1m[36mProduct Load (0.7ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:7
+Completed 200 OK in 6ms (Views: 4.3ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/users" for ::1 at 2019-08-15 09:42:52 -0400
+Processing by UsersController#create as HTML
+  Parameters: {"user"=>{"username"=>"anapancake", "email"=>"", "password"=>"[FILTERED]"}}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:22
+  [1m[36mUser Exists (1.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "anapancake"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:22
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", ""], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:22
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:22
+Completed 422 Unprocessable Entity in 308ms (Views: 0.3ms | ActiveRecord: 1.9ms)
+
+
+Started POST "/auth/login" for ::1 at 2019-08-15 09:42:55 -0400
+Processing by AuthenticationController#login as HTML
+  Parameters: {"username"=>"anapancake", "email"=>"", "password"=>"[FILTERED]", "authentication"=>{"username"=>"anapancake", "email"=>"", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "anapancake"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:4
+Completed 200 OK in 290ms (Views: 0.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users/2/products" for ::1 at 2019-08-15 09:42:55 -0400
+Processing by ProductsController#index as HTML
+  Parameters: {"user_id"=>"2"}
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:7
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/products" for ::1 at 2019-08-15 09:43:51 -0400
+Processing by ProductsController#create as HTML
+  Parameters: {"product"=>{"image"=>"Picture", "beanType"=>"Caracolillo", "geography"=>"Colombia", "altura"=>"1700", "toast"=>"Medio", "aroma"=>"Frutal", "body"=>"Suave", "acidity"=>"citrica"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/products_controller.rb:16
+  [1m[36mProduct Create (3.9ms)[0m  [1m[32mINSERT INTO "products" ("image", "beanType", "geography", "altura", "toast", "aroma", "body", "acidity", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["image", "Picture"], ["beanType", "Caracolillo"], ["geography", "Colombia"], ["altura", "1700"], ["toast", "Medio"], ["aroma", "Frutal"], ["body", "Suave"], ["acidity", "citrica"], ["user_id", 2], ["created_at", "2019-08-15 13:43:51.158351"], ["updated_at", "2019-08-15 13:43:51.158351"]]
+  ↳ app/controllers/products_controller.rb:16
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/products_controller.rb:16
+Completed 201 Created in 13ms (Views: 0.4ms | ActiveRecord: 5.7ms)
+
+
+Started GET "/users/2/products" for ::1 at 2019-08-15 09:43:51 -0400
+Processing by ProductsController#index as HTML
+  Parameters: {"user_id"=>"2"}
+  [1m[36mProduct Load (0.6ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:7
+Completed 200 OK in 4ms (Views: 3.0ms | ActiveRecord: 0.6ms)
+
+

@@ -39,19 +39,15 @@ Makeespresso is an application that allows coffee lovers to learn more about Spe
 ## MVP
 
 * Users can register an account, log in and log out 
-* Users can see which kind of coffee the shops have
-* Users can find specialty coffee by Type of grain and origin
-* Registered users can post, update and delete comments under coffee types for a review.
+* Registered users can post, update and delete their favourite coffee for their own colection
 
 ### Post-MVP
 
-* Weekly newsletter
-* Stores show inventroy
 * Users can save to favorites
+* Users can leave comments on products of other users
 * Users can find recipies of expresso based berverages 
 * Users can accept if they are interested in recieving a weekly newsletter using action mailer
 * Users can add their picture profile
-* Firebase API to strorge user's images
 
 
 ### App Features
@@ -69,40 +65,67 @@ Lola is a writer and coffee enthusiast and she's always looking for small, local
 User: 
 
 * Lola can create can register and log in into the platform.
-* Lola can browse coffee shops finding it's location, operation hours.
-* Lola can learn more about the coffee characteristics that this shops provide
-* Lola can find the type of coffee is selling
-
+* Lola can post her favorite products, edit and/or delete them
 * Lola can log out
+
 ### Components preview
 
-```<App >
-  <nav />
-  <registrationForm / >
-  <landingPage />
-  <about />
-  <coffeePage />
-  <storesPage />
-</App>
+```<div className="login-page">
+      <div className="third-width">
+        <h1>Welcome!</h1>
+        <img className="welcome-img"src="https://images.unsplash.com/photo-1441448770220-76743f9e6af6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80" alt="Welcome Image"></img> 
+      </div>
+
+      <div className="third-width">
+
+        <h2>login</h2>
+        <hr />
+        <form onSubmit={(e) => {
+          e.preventDefault();
+          props.handleLogin();
+        }} >
+          <p>Username:</p>
+          <input name="username" type="text" value={props.formData.username} onChange={props.handleChange} />
+          <p>Password:</p>
+          <input name="password" type="password" value={props.formData.password} onChange={props.handleChange} />
+          <hr />
+          <button>Login</button>
+        </form>
+      </div>
+      <div className="third-width">
+        <Link to="/register">Register</Link>
+      </div>
+    </div>
 ```
 
 ## ERD
 
-| Coffee | Shops  | Users |
-|:-------------: |:---------------:| :-------------:|
-| Can be found in mulitple shops     | Can have multiple types of coffee | Can post, edit and delete reviews |
+| Coffee | Users |
+|:-------------: | :-------------:|
+| Belongs to Users | Users can post, edit and delete posts |
 
 
-![erd makeespresso Diagram](https://user-images.githubusercontent.com/20978259/62840473-87f3ca80-bc69-11e9-8021-a6f6a92049bb.png)
+![erd](https://user-images.githubusercontent.com/20978259/63097600-e73e2d00-bf3e-11e9-9e7b-f568a52966fe.png)
+
 
 
 ## API Endpoint Documentation
-
-Get  | Description
+##### User 
+Path | Descritpion 
 ------------- | -------------
-coffee/all  | shows all the coffee available in the platform
+/profile | shows user profile and products added to theirs board
 
-
+##### Login 
+Path  | Description
+------------- | -------------
+/login | Logs in existent user
+/register | Register new user
+##### Product
+Path  | Description
+------------- | -------------
+/new/product | user can create a new product
+/products/:id | shows the product selected
+/products/:id/edit | edits product selected
 
 ## Wireframes
 
@@ -131,7 +154,7 @@ coffee/all  | shows all the coffee available in the platform
 
 * 08/12/19 - Backend set up
 * 08/13/19 - Front end API
-* 08/14/19 - Front end distrubution
+* 08/14/19 - Full Crud Working, Front end distrubution and start working on MVP
 * 08/15/19 - CSS Design and responsiveness
 * 08/16/19 - Review and Deployment
 * 08/17/19 - Presentation
