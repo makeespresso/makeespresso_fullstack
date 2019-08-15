@@ -29,12 +29,11 @@ export default class Profile extends Component {
   render() {
     // in order to get the user data from  that is stored in local storage JWT
     // pull it from the state, current user. 
-
     let { username } = this.state.currentUser
     let { products, gotProducts } = this.state
     return (
       <div style={{ background: `red` }}>
-        <h1>My Coffee {username}</h1>
+        <h1>{username}'s Board</h1>
         {/* {gotProducts ?
 
           <ProductView productsArray={products} /> : <span>loading</span>

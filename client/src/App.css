@@ -2,9 +2,6 @@
   text-align: center;
 }
 
-.App {
-}
-
 .navbar{
   height:3rem;
   width:100vw;
@@ -14,7 +11,7 @@
   flex-flow: row;
   position: static;
   top: 0;
-  background-color: rgb(240,240,240);
+  background-color: gray;
 }
 
 .navbar h1, .navbar h2, .navbar h3, .navbar s, .navbar p,.navbar small, .navbar a{
@@ -23,12 +20,43 @@
 }
 
 .container {
-  background-color: lightblue;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: rgb(21, 21, 21);
+  background-color: lightblue; 
+  min-height: calc(100vh - 3rem); 
+}
+
+/* COMPONENT Login = login-page */
+.my-account-login-page{
+}
+
+.welcome-img{
+  width: 25vw;
+}
+.third-width{
+background: green;
+width: 50%;
+margin: 10px;
+}
+
+.login-page {
+  background: salmon;
+  height: 400px;
+}
+
+
+/* COMPONENT ProductView = PRODUCT CARD */
+.product-container{
+  background: pink;
+}
+.product-card{
+  background: yellow;
+  width: 50%;
+}
+
+.product-image{
+  width: 8em;
+  height: 6rem;
+}
+.product-create{
+  background:green;
+margin: 10px 0 10px 0;
 }

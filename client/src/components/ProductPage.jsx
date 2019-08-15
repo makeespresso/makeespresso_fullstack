@@ -19,7 +19,7 @@ class ProductsView extends Component {
     const { product } = this.props;
     return (
       <div className="product-page">
-        {product === undefined ? <h2>Loading . . .</h2> : (
+        {product === undefined ? <h2>Loading</h2> : (
           <div>
             <img alt={product.name} src={product.photo} />
             {this.state.isEdit ?
@@ -36,8 +36,8 @@ class ProductsView extends Component {
               )} />
               :
               <>
-                <h1>Product</h1>
-                <h1>{product.geography}</h1>
+                <p>Edit product:</p>
+                <p>{product.geography}</p>
                 <button onClick={() => {
                   this.setState({
                     isEdit: true

@@ -10,6 +10,7 @@ import CreateProduct from './components/CreateProduct';
 import Login from './components/Login';
 import Register from './components/Register';
 import Profile from './components/Profile';
+import Home from './components/Home';
 
 import {
   createProduct,
@@ -162,7 +163,7 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App">
+      <div className="">
         <section className='navbar'>
           <h1><Link to='/' onClick={() => this.setState({
             productForm: {
@@ -193,6 +194,15 @@ class App extends Component {
               handleRegister={this.handleRegister}
               handleChange={this.authHandleChange}
               formData={this.state.authFormData} />)} />
+          
+          <Route
+            exact path="/profile"
+            render={(props) => {
+              return <Profile
+                getUserProducts={this.getUserProducts} />
+            }}
+          />
+          
           <Route exact path="/profile" render={() => (
             <ProductsView
               products={this.state.products}
@@ -225,13 +235,12 @@ class App extends Component {
                 deleteProduct={this.deleteProduct} />
             }}
           />
+          
           <Route
-            exact path="/profile"
-            render={(props) => {
-              return <Profile
-                getUserProducts={this.getUserProducts} />
-            }}
+            exact path="/"
+            render={Home}
           />
+
           <Route
             exact path="/products/:id/edit"
             render={(props) => {
