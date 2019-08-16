@@ -1,5 +1,8 @@
 import React from 'react'
 
+import { Link } from 'react-router-dom';
+
+
 export default function Home() {
   return (
     <div>
@@ -11,12 +14,14 @@ export default function Home() {
         </div>
         <div className="three-article-column">
           <div className="article-column">
-            <h1>History</h1>
-            <img className="article-column-image" src="https://images.unsplash.com/photo-1530313292289-fa316f332666?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80" />
+            <Link to="/history"><h1>History</h1>
+              <img className="article-column-image" src="https://images.unsplash.com/photo-1530313292289-fa316f332666?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80" />
+            </Link>
           </div>
           <div className="article-column">
-            <h1>Extractions</h1>
-            <img className="article-column-image" src="https://images.unsplash.com/photo-1558996338-294a904a1815?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80" />
+            <Link to="/extractions"><h1>Extractions</h1>
+              <img className="article-column-image" src="https://images.unsplash.com/photo-1558996338-294a904a1815?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80" />
+            </Link>
           </div>
           <div className="article-column">
             <h1>Coffee</h1>

@@ -11,6 +11,7 @@ import Login from './components/Login';
 import Register from './components/Register';
 import Board from './components/Board';
 import Home from './components/Home';
+import Extractions from './components/Extractions';
 
 import {
   createProduct,
@@ -230,6 +231,13 @@ class App extends Component {
             />
           )}
           /> */}
+
+          <Route
+            exact path="/extractions"
+            render={() => (
+              <Extractions />
+            )}
+          />
 
 
 
