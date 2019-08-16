@@ -9,9 +9,10 @@ import ProductPage from './components/ProductPage';
 import CreateProduct from './components/CreateProduct';
 import Login from './components/Login';
 import Register from './components/Register';
-import Board from './components/Board';
+import Profile from './components/Profile';
 import Home from './components/Home';
 import Extractions from './components/Extractions';
+import History from './components/History';
 
 import {
   createProduct,
@@ -50,6 +51,9 @@ class App extends Component {
       this.setState({
         currentUser: user
       })
+    }
+    else {
+      this.props.history.push('/login');
     }
   }
 
@@ -174,7 +178,7 @@ class App extends Component {
               image: ""
             }
           })}>makeespresso</Link></h1>
-          <Link to='/board'><p>Board</p></Link>
+          <Link to='/board'><p>Coffee Board</p></Link>
           <div>
             {this.state.currentUser
               ?
@@ -206,7 +210,7 @@ class App extends Component {
           <Route
             exact path="/profile"
             render={(props) => {
-              return <Board
+              return <Profile
                 products={this.state.products}
                 getUserProducts={this.getUserProducts}
                 newProduct={this.newProduct} />
@@ -215,6 +219,7 @@ class App extends Component {
 
           <Route exact path="/board" render={() => (
             <ProductsView
+              currentUser={this.state.currentUser}
               products={this.state.products}
               productForm={this.state.productForm}
               handleFormChange={this.handleFormChange}
@@ -239,6 +244,12 @@ class App extends Component {
             )}
           />
 
+          <Route
+            exact path="/history"
+            render={() => (
+              <History />
+            )}
+          />
 
 
           <Route
