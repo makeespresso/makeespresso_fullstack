@@ -112,6 +112,7 @@ class App extends Component {
     }))
   }
 
+
   mountEditForm = async (id) => {
     const products = await readAllProducts();
     const product = products.find(el => el.id === parseInt(id));
@@ -147,9 +148,10 @@ class App extends Component {
     this.setState({
       currentUser: null
     })
-
     this.props.history.push('/');
   }
+
+
 
   authHandleChange = (e) => {
     const { name, value } = e.target;
