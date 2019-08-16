@@ -1,5 +1,7 @@
 .App {
   text-align: center;
+  width: 100vw;
+  height: 100vh;
 }
 
 .navbar{
@@ -25,9 +27,43 @@
 }
 
 /* COMPONENT Home = */
-.hero-image{
-max-height: 55vh;
+.main-home-div{
+  background: red;
 }
+.hero-image-div{
+height: 70vh;
+width: 100vw;
+}
+
+.hero-image{
+max-height: 100%;
+width: 100%;
+}
+.text-over-hero-img{
+  position: absolute;
+  top: 40%;
+  z-index: 100;
+  transform: translateY(-70%);
+  width: calc(30vw - 50px);
+  background:yellow;
+  text-align: center;
+}
+
+.three-article-column{
+  background: pink;
+  display: flex;
+}
+
+.article-column{
+background: salmon;
+width: 33.3%;
+text-align: center;
+
+}
+.article-column-image{
+width: 100%
+}
+
 /* COMPONENT Login = login-page */
 .my-account-login-page{
 }
@@ -53,7 +89,12 @@ margin: 10px;
 }
 .product-card{
   background: yellow;
-  width: 50%;
+  margin: 100px 150px 8px 210px;
+  column-width: 200px;
+  column-gap: 10px;
+  width: 88%;
+  max-width: 1000px;
+  float: right;
 }
 
 .product-image{

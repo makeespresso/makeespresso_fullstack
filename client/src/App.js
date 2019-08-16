@@ -11,6 +11,7 @@ import Login from './components/Login';
 import Register from './components/Register';
 import Board from './components/Board';
 import Home from './components/Home';
+import Extractions from './components/Extractions';
 
 import {
   createProduct,
@@ -112,6 +113,7 @@ class App extends Component {
     }))
   }
 
+
   mountEditForm = async (id) => {
     const products = await readAllProducts();
     const product = products.find(el => el.id === parseInt(id));
@@ -147,9 +149,10 @@ class App extends Component {
     this.setState({
       currentUser: null
     })
-
     this.props.history.push('/');
   }
+
+
 
   authHandleChange = (e) => {
     const { name, value } = e.target;
@@ -228,6 +231,13 @@ class App extends Component {
             />
           )}
           /> */}
+
+          <Route
+            exact path="/extractions"
+            render={() => (
+              <Extractions />
+            )}
+          />
 
 
 
