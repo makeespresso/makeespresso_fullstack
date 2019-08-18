@@ -1,29 +1,35 @@
 import React, { Component } from 'react'
 import decode from 'jwt-decode';
 import ProductView from './ProductView';
+import { withRouter } from 'react-router-dom';
 
-export default class Profile extends Component {
+class Profile extends Component {
   constructor(props) {
     super(props);
     this.state = {
       currentUser: "",
-      products: "",
-      gotProducts: false
+      products: ""
     }
+
+    console.log(this.props)
   }
 
-  async componentDidMount() {
+  async componentWillMount() {
+    console.log('props', this.props)
     const checkUser = localStorage.getItem("jwt");
     if (checkUser) {
       const user = decode(checkUser);
-      const products = await this.props.getUserProducts(user.user_id)
+      // const products = await this.props.getUserProducts(user.user_id)
       this.setState({
         currentUser: user,
-        products,
-        gotProducts: true
+        products: this.props.products
       })
     }
+    console.log(this.state)
+  }
 
+  edit(id) {
+    this.props.history.push('/products/' + id)
   }
 
   render() {
@@ -31,18 +37,42 @@ export default class Profile extends Component {
     // pull it from the state, current user. 
     let { username } = this.state.currentUser
     let { products, gotProducts } = this.state
+    console.log('products> /', products)
     return (
-      <div style={{ background: `red` }}>
-        <h1>{username}'s Profile</h1>
-        {/* {gotProducts ?
+      <>
+        <article className="sidebar">
+          <img className="picture-profile" src="https://images.unsplash.com/photo-1518116486719-4f46886d9aab?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1100&q=80" alt="Picture Profile" />
+          <h1>{username}'s Profile</h1>
 
-          <ProductView productsArray={products} /> : <span>loading</span>
-        } */}
-      </div>
+        </article>
+        <div>
+          {products.map(product => (
+            <div
+              key={product.id}
+            >
+              {product.user_id === this.state.currentUser.user_id ?
+                <div className="product-card"
+                  onClick={() => { this.edit(product.id) }}>
+                  <img className="product-image" alt={product.beanType} src={product.image} />
+                  <p>Origin: {product.geography}</p>
+                  <p>Altitude: {product.altura}</p>
+                  <p>Toast: {product.toast}</p>
+                  <p>Aroma: {product.aroma}</p>
+                  <p>Body: {product.body}</p>
+                  <p>Acidity: {product.acidity}</p>
+                </div>
+
+                : <></>
+              }
+
+            </div>
+          ))}
+        </div>
+      </>
     )
   }
 }
-
+export default withRouter(Profile);
 
 
 

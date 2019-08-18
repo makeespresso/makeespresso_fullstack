@@ -32,9 +32,9 @@ class App extends Component {
       products: [],
       productForm: {
 
-
       },
       currentUser: null,
+      userProducts: "",
       authFormData: {
         username: "",
         email: "",
@@ -66,13 +66,13 @@ class App extends Component {
   }
 
   getUserProducts = async (id) => {
-    const products = await readUserProducts(id);
-    console.log(products)
-    this.setState({
-      products
-    })
-    console.log(this.state)
-    return products
+    const userProducts = await readUserProducts(id);
+    // console.log(products)
+    // this.setState({
+    //   products
+    // })
+    // console.log(this.state)
+    return userProducts
   }
 
   newProduct = async (e) => {
@@ -133,13 +133,13 @@ class App extends Component {
   }
 
   handleLogin = async () => {
-    console.log('hello')
     const userData = await loginUser(this.state.authFormData);
-    this.setState({
-      currentUser: decode(userData)
-    })
     localStorage.setItem("jwt", userData);
+    let currentUser = decode(userData)
+    let userProducts = this.getUserProducts(currentUser.user_id)
+    this.setState({ currentUser, userProducts })
     this.props.history.push('/profile');
+    console.log(this.state)
   }
 
   handleRegister = async (e) => {
@@ -211,9 +211,12 @@ class App extends Component {
             exact path="/profile"
             render={(props) => {
               return <Profile
-                products={this.state.products}
+
                 getUserProducts={this.getUserProducts}
-                newProduct={this.newProduct} />
+                newProduct={this.newProduct}
+                products={this.state.products}
+
+              />
             }}
           />
 
@@ -223,6 +226,7 @@ class App extends Component {
               products={this.state.products}
               productForm={this.state.productForm}
               handleFormChange={this.handleFormChange}
+              userProducts={this.state.userProducts}
             />
           )}
           />

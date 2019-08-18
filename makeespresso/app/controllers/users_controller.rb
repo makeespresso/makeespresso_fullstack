@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
-  before_action :set_user, only: [:show, :update, :destroy]
-  before_action :authorize_request, except: :create 
-  before_action :authenticate_user, only: [:update, :destroy]
+  # before_action :set_user, only: [:show, :update, :destroy]
+  # before_action :authorize_request, except: :create 
+  # before_action :authenticate_user, only: [:update, :destroy]
 
   # GET /users
   def index
@@ -11,9 +11,11 @@ class UsersController < ApplicationController
   end
 
   # GET /users/1
+
   def show
-    render json: @user
-  end
+    @user = User.find(params[:id])
+    render json: @user, status: :ok
+    end
 
   # POST /users
   def create
