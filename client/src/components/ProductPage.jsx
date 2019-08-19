@@ -37,7 +37,13 @@ class ProductsView extends Component {
               :
               <>
                 {this.props.currentUser.user_id === product.user_id && <p>Edit product:</p>}
-                <p>{product.geography}</p>
+                <img className="product-image-on-ProductPage" alt={product.beanType} src={product.image} />
+                <p>Origin: {product.geography}</p>
+                <p>Altitude: {product.altura}</p>
+                <p>Toast: {product.toast}</p>
+                <p>Aroma: {product.aroma}</p>
+                <p>Body: {product.body}</p>
+                <p>Acidity: {product.acidity}</p>
                 {this.props.currentUser.user_id === product.user_id &&
                   <>
                     <button onClick={() => {

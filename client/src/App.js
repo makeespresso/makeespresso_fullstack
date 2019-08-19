@@ -172,7 +172,7 @@ class App extends Component {
     return (
       <div className="">
         <section className='navbar'>
-          <h1><Link to='/' onClick={() => this.setState({
+          <h1 className="logo-font"><Link to='/' onClick={() => this.setState({
             productForm: {
               origin: "",
               image: ""

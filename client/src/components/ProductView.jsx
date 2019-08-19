@@ -48,11 +48,11 @@ class ProductView extends Component {
           >
             <img className="product-image" alt={product.beanType} src={product.image} />
             <p>Origin: {product.geography}</p>
-            <p>Altitude: {product.altura}</p>
+            {/* <p>Altitude: {product.altura}</p>
             <p>Toast: {product.toast}</p>
             <p>Aroma: {product.aroma}</p>
             <p>Body: {product.body}</p>
-            <p>Acidity: {product.acidity}</p>
+            <p>Acidity: {product.acidity}</p> */}
 
             {product.user_id === this.props.currentUser.user_id ?
               <input TYPE="button" value="Edit Product" onClick={() => { this.goEdit(product.id) }}></input>
