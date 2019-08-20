@@ -4,7 +4,7 @@ import { withRouter } from 'react-router-dom';
 function EditProduct(props) {
   return (
     <div>
-      <h3>Edit Product</h3>
+      <h1>Edit Product</h1>
       <form onSubmit={props.editProduct}>
         <p>Image:</p><input type="text" name="image" placeholder="Image URL" value={props.productForm.photo} onChange={props.handleFormChange} />
         <p>Altitude:</p><input type="text" name="altitude" placeholder="Altitude" value={props.productForm.name} onChange={props.handleFormChange} />

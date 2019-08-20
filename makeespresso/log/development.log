@@ -39522,3 +39522,276 @@ Processing by ProductsController#index as HTML
 Completed 200 OK in 6ms (Views: 4.7ms | ActiveRecord: 0.4ms)
 
 
+Started GET "/products" for ::1 at 2019-08-20 16:28:00 -0400
+Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (0.8ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:7
+Completed 200 OK in 13ms (Views: 11.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/products" for ::1 at 2019-08-20 16:29:30 -0400
+Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:7
+Completed 200 OK in 8ms (Views: 7.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/products" for ::1 at 2019-08-20 16:29:30 -0400
+Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:7
+Completed 200 OK in 6ms (Views: 5.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/products" for ::1 at 2019-08-20 16:29:31 -0400
+Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:7
+Completed 200 OK in 9ms (Views: 8.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/products" for ::1 at 2019-08-20 16:29:31 -0400
+Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:7
+Completed 200 OK in 5ms (Views: 3.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/products" for ::1 at 2019-08-20 16:29:39 -0400
+Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:7
+Completed 200 OK in 7ms (Views: 6.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/products" for ::1 at 2019-08-20 16:29:39 -0400
+Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:7
+Completed 200 OK in 6ms (Views: 4.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/products" for ::1 at 2019-08-20 16:29:40 -0400
+Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:7
+Completed 200 OK in 6ms (Views: 5.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/products" for ::1 at 2019-08-20 16:29:40 -0400
+Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (0.7ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:7
+Completed 200 OK in 7ms (Views: 6.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/products" for ::1 at 2019-08-20 16:29:50 -0400
+Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:7
+Completed 200 OK in 8ms (Views: 7.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/products" for ::1 at 2019-08-20 16:29:52 -0400
+Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:7
+Completed 200 OK in 13ms (Views: 12.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/products" for ::1 at 2019-08-20 16:32:55 -0400
+Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:7
+Completed 200 OK in 8ms (Views: 7.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/products" for ::1 at 2019-08-20 17:02:26 -0400
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/anabenedict/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (0.6ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:7
+Completed 200 OK in 39ms (Views: 20.9ms | ActiveRecord: 6.3ms)
+
+
+Started POST "/users" for ::1 at 2019-08-20 17:17:32 -0400
+Processing by UsersController#create as HTML
+  Parameters: {"user"=>{"username"=>"tibby", "email"=>"fallwall19@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:24
+  [1m[36mUser Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "tibby"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:24
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "fallwall19@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:24
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "tibby"], ["email", "fallwall19@gmail.com"], ["password_digest", "$2a$12$9xCcsgRHJz3gQVuxU1e.tuc8dWDdUwmvkLIv6fJPkF5816aSGBLd2"], ["created_at", "2019-08-20 21:17:32.754530"], ["updated_at", "2019-08-20 21:17:32.754530"]]
+  ↳ app/controllers/users_controller.rb:24
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:24
+  Rendering user_mailer/welcome_email.html.erb within layouts/mailer
+  Rendered user_mailer/welcome_email.html.erb within layouts/mailer (624.2ms)
+UserMailer#welcome_email: processed outbound mail in 634.8ms
+Completed 500 Internal Server Error in 1180ms (ActiveRecord: 8.5ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `user' for #<#<Class:0x00007ff06223e6f0>:0x00007ff062ab00b8>
+Did you mean?  @user):
+    1: <h1>Hi <%=user.username %></h1>
+    2: <p>Welcome to Makeespresso</p>
+  
+app/views/user_mailer/welcome_email.html.erb:1:in `_app_views_user_mailer_welcome_email_html_erb__606188613449821366_70335207702000'
+app/mailers/user_mailer.rb:6:in `welcome_email'
+app/controllers/users_controller.rb:25:in `create'
+Started POST "/users" for ::1 at 2019-08-20 17:17:35 -0400
+Processing by UsersController#create as HTML
+  Parameters: {"user"=>{"username"=>"tibby", "email"=>"fallwall19@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:24
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "tibby"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:24
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "fallwall19@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:24
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:24
+Completed 422 Unprocessable Entity in 270ms (Views: 0.3ms | ActiveRecord: 1.1ms)
+
+
+Started POST "/users" for ::1 at 2019-08-20 17:18:16 -0400
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/anabenedict/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by UsersController#create as HTML
+  Parameters: {"user"=>{"username"=>"tibbytibby", "email"=>"fallwall.xu@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:24
+  [1m[36mUser Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "tibbytibby"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:24
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "fallwall.xu@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:24
+  [1m[36mUser Create (1.2ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "tibbytibby"], ["email", "fallwall.xu@gmail.com"], ["password_digest", "$2a$12$zAlNKMUMs1GPm2YH8G1tIunqyAE0.P93biomiceH1rkktfCiibDVK"], ["created_at", "2019-08-20 21:18:17.209744"], ["updated_at", "2019-08-20 21:18:17.209744"]]
+  ↳ app/controllers/users_controller.rb:24
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:24
+  Rendering user_mailer/welcome_email.html.erb within layouts/mailer
+  Rendered user_mailer/welcome_email.html.erb within layouts/mailer (37.8ms)
+UserMailer#welcome_email: processed outbound mail in 46.2ms
+Completed 500 Internal Server Error in 470ms (ActiveRecord: 6.4ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `user' for #<#<Class:0x00007fa203a026c8>:0x00007fa202700048>
+Did you mean?  @user):
+    1: <h1>Hi <%=user.username %></h1>
+    2: <p>Welcome to Makeespresso</p>
+  
+app/views/user_mailer/welcome_email.html.erb:1:in `_app_views_user_mailer_welcome_email_html_erb__199553418549779798_70166901031380'
+app/mailers/user_mailer.rb:6:in `welcome_email'
+app/controllers/users_controller.rb:25:in `create'
+Started POST "/users" for ::1 at 2019-08-20 17:19:17 -0400
+Processing by UsersController#create as HTML
+  Parameters: {"user"=>{"username"=>"tibbytibby2", "email"=>"fallwall@icloud.com", "password"=>"[FILTERED]"}}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:24
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "tibbytibby2"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:24
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "fallwall@icloud.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:24
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "tibbytibby2"], ["email", "fallwall@icloud.com"], ["password_digest", "$2a$12$bJgddjy8e1Rroce4OkZEhezMFgSpTWx3D4NHUyNCD/kpfKJMuKFti"], ["created_at", "2019-08-20 21:19:17.698495"], ["updated_at", "2019-08-20 21:19:17.698495"]]
+  ↳ app/controllers/users_controller.rb:24
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:24
+  Rendering user_mailer/welcome_email.html.erb within layouts/mailer
+  Rendered user_mailer/welcome_email.html.erb within layouts/mailer (0.3ms)
+UserMailer#welcome_email: processed outbound mail in 13.4ms
+Sent mail to fallwall@icloud.com (1135.1ms)
+Date: Tue, 20 Aug 2019 17:19:17 -0400
+From: makeespresso@gmail.com
+To: fallwall@icloud.com
+Message-ID: <5d5c63d5af3a4_91c63fd101d233d877239@Anas-MacBook-Pro.local.mail>
+Subject: Hi #(user.username, welcome to Makeespresso!
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <h1>Hi tibbytibby2</h1>
+<p>Welcome to Makeespresso</p>
+  </body>
+</html>
+
+Completed 201 Created in 1429ms (Views: 1.7ms | ActiveRecord: 2.0ms)
+
+
+Started POST "/auth/login" for ::1 at 2019-08-20 17:19:18 -0400
+Processing by AuthenticationController#login as HTML
+  Parameters: {"username"=>"tibbytibby2", "email"=>"fallwall@icloud.com", "password"=>"[FILTERED]", "authentication"=>{"username"=>"tibbytibby2", "email"=>"fallwall@icloud.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "tibbytibby2"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:4
+Completed 200 OK in 254ms (Views: 0.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/14/products" for ::1 at 2019-08-20 17:19:19 -0400
+Processing by ProductsController#index as HTML
+  Parameters: {"user_id"=>"14"}
+  [1m[36mProduct Load (0.8ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:7
+Completed 200 OK in 26ms (Views: 16.4ms | ActiveRecord: 4.2ms)
+
+
+Started POST "/auth/login" for ::1 at 2019-08-20 17:20:37 -0400
+Processing by AuthenticationController#login as HTML
+  Parameters: {"username"=>"tibbytibby2", "email"=>"fallwall@icloud.com", "password"=>"[FILTERED]", "authentication"=>{"username"=>"tibbytibby2", "email"=>"fallwall@icloud.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "tibbytibby2"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:4
+Completed 200 OK in 271ms (Views: 0.2ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/users/14/products" for ::1 at 2019-08-20 17:20:37 -0400
+Processing by ProductsController#index as HTML
+  Parameters: {"user_id"=>"14"}
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:7
+Completed 200 OK in 18ms (Views: 12.5ms | ActiveRecord: 3.7ms)
+
+
+Started POST "/products" for ::1 at 2019-08-20 17:21:43 -0400
+Processing by ProductsController#create as HTML
+  Parameters: {"product"=>{"origin"=>"", "image"=>"https://images.unsplash.com/photo-1484251065541-c9770829890f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80", "beanType"=>"arabica", "geography"=>"mexico", "altura"=>"1200", "toast"=>"dark", "aroma"=>"Soft Pipe Tobacco", "body"=>"Good", "acidity"=>"Pleasant tanginess when the coffee first hits the palate"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19
+Unpermitted parameter: :origin
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/products_controller.rb:16
+  [1m[36mProduct Create (0.6ms)[0m  [1m[32mINSERT INTO "products" ("image", "beanType", "geography", "altura", "toast", "aroma", "body", "acidity", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["image", "https://images.unsplash.com/photo-1484251065541-c9770829890f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80"], ["beanType", "arabica"], ["geography", "mexico"], ["altura", "1200"], ["toast", "dark"], ["aroma", "Soft Pipe Tobacco"], ["body", "Good"], ["acidity", "Pleasant tanginess when the coffee first hits the palate"], ["user_id", 14], ["created_at", "2019-08-20 21:21:43.485852"], ["updated_at", "2019-08-20 21:21:43.485852"]]
+  ↳ app/controllers/products_controller.rb:16
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/products_controller.rb:16
+Completed 201 Created in 24ms (Views: 0.4ms | ActiveRecord: 1.4ms)
+
+
+Started POST "/auth/login" for ::1 at 2019-08-20 17:21:57 -0400
+Processing by AuthenticationController#login as HTML
+  Parameters: {"username"=>"tibbytibby2", "email"=>"fallwall@icloud.com", "password"=>"[FILTERED]", "authentication"=>{"username"=>"tibbytibby2", "email"=>"fallwall@icloud.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "tibbytibby2"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:4
+Completed 200 OK in 292ms (Views: 0.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/14/products" for ::1 at 2019-08-20 17:21:57 -0400
+Processing by ProductsController#index as HTML
+  Parameters: {"user_id"=>"14"}
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:7
+Completed 200 OK in 8ms (Views: 7.0ms | ActiveRecord: 0.4ms)
+
+
