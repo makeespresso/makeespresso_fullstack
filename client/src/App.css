@@ -1,9 +1,17 @@
+body{
+  font-family: 'Crimson Text', serif;
+  color: rgb(83, 83, 83);
+
+}
 .App {
   text-align: center;
   width: 100vw;
   height: 100vh;
 }
 
+button{
+margin: 0px;
+}
 .navbar{
   height:3rem;
   width:100vw;
@@ -13,147 +21,274 @@
   flex-flow: row;
   position: static;
   top: 0;
-  background-color: #FFFFFF;
+  background: rgb(246, 245, 243);
 }
-
+.user-icon-login{
+  width: 36px;
+  height: 36px;
+}
 .navbar h1, .navbar h2, .navbar h3, .navbar s, .navbar p,.navbar small, .navbar a{
-  color: brown;
   text-decoration: none;
 }
 
-.logo-font{
-  font-family: 'Playfair Display', serif;
-  color: #000000;
-  font-size: 1rem;
+a:visited{
+color: #000000;
 }
-
 
 .container {
   min-height: calc(100vh - 3rem); 
 }
 
+
 /* COMPONENT Home = */
-.main-home-div{
-  background: red;
-}
+
 .hero-image-div{
 height: 70vh;
 width: 100vw;
 }
 
 .hero-image{
-max-height: 100%;
-width: 100%;
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
 }
 .text-over-hero-img{
   position: absolute;
   top: 40%;
   z-index: 100;
   transform: translateY(-70%);
-  width: calc(30vw - 50px);
+  width: calc(30vw - 40px);
   text-align: center;
   color: white;
   font-size: 3rem;
   margin-left: 5%;
 }
 
+.article-column:hover .text-over-column-image{
+	text-align:justify;
+	color:#000000;
+	font-size:20px;
+	font-weight:700;  
+}
+
+
 .three-article-column{
-  background: pink;
   display: flex;
+  box-sizing: border-box;
 }
 
 .article-column{
-background: salmon;
 width: 33.3%;
 text-align: center;
 
 }
 .article-column-image{
-width: 100%
+width: 100%;
+border: 3px solid white;
 }
 
 .text-over-column-image{
   position: absolute;
   top: 90%;
   z-index: 100;
-  transform: translateY(-70%);
-  width: calc(30vw - 50px);
   text-align: center;
   color: white;
   font-size: 1.4rem;
+  transform: scaleY(0);
+  transition: transform  .5s;
 }
+
+.article-column-image:hover{
+  transform: scaleY(1);
+
+}
+
+
 /* COMPONENT Login = login-page */
 .my-account-login-page{
 }
 
+.login-page {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  justify-content: center;
+  align-items: center;
+  background-color: #f5f5f5;
+  background-image: url("https://www.transparenttextures.com/patterns/stardust.png");
+}
+
+.third-width{
+width: 30%;
+margin: 10px;
+height: 40%;
+}
 .welcome-img{
   width: 25vw;
-}
-.third-width{
-border: solid 1px black;
-width: 50%;
-margin: 10px;
+  margin: 0 auto;
+  display: block;
+  margin: 10px; 
+  object-fit: fill;
+  align-content: center;
+  box-shadow:rgba(230, 216, 209) 10px 20px;
+  margin: 10px;
+
+
 }
 
-.login-page {
-  background: salmon;
-  height: 400px;
+.third-width h1{
+  text-align: center;
 }
+
 /* COMPONENT Profile = article */
-
-article{
-  background: pink;
-  width: 20%;
-  height: 100vh;
+.profile-container{
+  width: 100vw;
+  background-color: #f5f5f5;
+  background-image: url("https://www.transparenttextures.com/patterns/stardust.png");
 }
-
-.sidebar{
-  background: lightgray;
-  width: 20%;
-  height: 100vh;
-}
-
+/* .sidebar{
+  background: rgb(246, 245, 243);
+} */
+/* 
 .picture-profile{
   border-radius: 100%;
-  height: 20%;
-  width:50%;
-}
-
-
-/* COMPONENT ProductView = PRODUCT CARD */
-.product-container{
-
-}
-.product-card{
-
-  /* margin: 100px 150px 8px 210px; */
+  height: 20vh;
+} */
+.product-card-on-Profile{
+  height: auto;
+  width: 30vw;
+  min-height: 333.3px;
+  min-width: 368.63px;
+  background-color: rgb(230, 216, 209);
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  align-self: center;
+  justify-content: center;
   margin: 10px;
-  column-width: 500px;
-  column-gap: 10px;
-  width: 60%;
-  max-width: 1000px;
-  height: 40vh;
-  font-size: 1rem;
+}
+
+.product-image-2{
+  object-fit: fill;
+  height: 50vh;
+  width: 90%;
   align-content: center;
-  border: solid 1px black;
+  box-shadow: #000000 10px 20px;
+  margin: 10px;
+  /* background-color: white; */
 }
 
-.product-card p{
-text-align: center;
-}
+/* .product-description{
+background: whitesmoke;
+width: 80%;
+align-self: auto;
+} */
 
-.product-image{
-  float: left;
-  width: 35%;
-  height: 100%;
+/* COMPONENT ProductView */
+.product-container{
+  background-color: #f5f5f5;
+  background-image: url("https://www.transparenttextures.com/patterns/stardust.png");
+  display: flex;
+  flex-direction: column;
 }
 .product-create{
-  background:green;
+border: solid .03px gray;
+  background: whitesmoke;
   margin: 10px 0 10px 0;
+}
+.create-product-button{
+background-color: rgba(241, 236, 232);
+font-size: 1em;
+border: 1.5px;
+border-radius: 3px;
+padding: 20px;
+margin: 20px;
+}
+.test{
+max-width: 275px;
+background-color: rgba(241, 236, 232);
+width: 50vw;
+padding: 10px;
+margin: 20px;
+}
+.product-card{
+  height: auto;
+  width: auto;
+  border: solid 8px white;
+  display:flex;
+  align-items: flex-start;
+  flex-direction: column;
+  align-self: center;
+  justify-content: center;
+  margin: 10px;
+}
+
+.product-card p {
+  text-align: center;
+}
+
+.product-card input{
+text-align: center;
+background-color: #000000;
+color: white;
+margin: 5px;
+padding: 10px;
+}
+.product-image{
+  width: 100%;
+  object-fit: fill;
+  height: 30%;
 }
 
 
 /* COMPONENT ProductPage = product-image-on-ProductPage */
+.product-page{
+  background-color: #f5f5f5;
+  background-image: url("https://www.transparenttextures.com/patterns/stardust.png");
+}
 .product-image-on-ProductPage{
 width: 80vw;
 }
+
+/* COMPONENT Register*/
+
+.register-container{
+display: flex;
+justify-content: center;
+background-color: #f5f5f5;
+background-image: url("https://www.transparenttextures.com/patterns/stardust.png");
+
+}
+
+.register-image{
+  object-fit:cover;
+}
+.mid-width{
+  border: solid 1px black;
+  height: 80vh;
+  width: 45%;
+  text-align: center;
+  object-fit: fill;
+}
+
+input{
+    border: 1px solid black;
+}
+
+/* COMPONENT: History */
+.history-div{
+  width: 100vw;
+  height: 100vh;
+}
+.top-image{
+  width: 100%;
+  height: 90%; 
+}
+
+.top-image-image{
+object-fit: fill;
+width: 100%;
+height: 100%;
+}
+
+

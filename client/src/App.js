@@ -172,12 +172,12 @@ class App extends Component {
     return (
       <div className="">
         <section className='navbar'>
-          <h1 className="logo-font"><Link to='/' onClick={() => this.setState({
+          <p><Link to='/' onClick={() => this.setState({
             productForm: {
               origin: "",
               image: ""
             }
-          })}>makeespresso</Link></h1>
+          })}>makeespresso</Link></p>
           <Link to='/board'><p>Coffee Board</p></Link>
           <div>
             {this.state.currentUser
@@ -188,7 +188,8 @@ class App extends Component {
                 <button onClick={this.handleLogout}>logout</button>
               </>
               :
-              <button onClick={this.handleLoginButton}>Login/register</button>
+              <img className="user-icon-login" onClick={this.handleLoginButton} src="https://img.icons8.com/pastel-glyph/64/000000/person-male.png" alt="User Login"></img>
+              // <button className="login-button" onClick={this.handleLoginButton}>Login</button>
             }
           </div>
 

@@ -19,14 +19,15 @@ class ProductView extends Component {
     console.log(this.props)
     return (
       <div className="product-container">
-        <img className="hero-image" src="https://images.unsplash.com/photo-1524350876685-274059332603?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1651&q=80" alt="Coffee bag" />
-
+        <div className="hero-image-div">
+          <img className="hero-image" src="https://images.unsplash.com/photo-1524350876685-274059332603?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1651&q=80" alt="Coffee Bag" />
+        </div>
 
         {/* Add a new product bar appears only if there's a logged user */}
         {this.props.currentUser ?
           <div className="product-create">
-            <p>Tell us about about your new discover:</p>
-            <button onClick={this.checkAndGo}>Add a new product</button>
+            <p>New discover:</p>
+            <button className="create-product-button" onClick={this.checkAndGo}>Add Coffee</button>
           </div>
           : <></>
         }
@@ -46,19 +47,21 @@ class ProductView extends Component {
             className="product-card"
             onClick={() => { this.props.history.push('/products/' + product.id) }}
           >
-            <img className="product-image" alt={product.beanType} src={product.image} />
-            <p>Origin: {product.geography}</p>
-            {/* <p>Altitude: {product.altura}</p>
+            <div className="test">
+              <img className="product-image" alt={product.beanType} src={product.image} />
+              <p>Origin: {product.geography}</p>
+              {/* <p>Altitude: {product.altura}</p>
             <p>Toast: {product.toast}</p>
             <p>Aroma: {product.aroma}</p>
             <p>Body: {product.body}</p>
             <p>Acidity: {product.acidity}</p> */}
 
-            {product.user_id === this.props.currentUser.user_id ?
-              <input TYPE="button" value="Edit Product" onClick={() => { this.goEdit(product.id) }}></input>
-              : <></>
-            }
+              {product.user_id === this.props.currentUser.user_id ?
+                <input TYPE="button" value="Edit Product" onClick={() => { this.goEdit(product.id) }}></input>
+                : <></>
+              }
 
+            </div>
           </div>
         ))}
 

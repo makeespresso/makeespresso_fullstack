@@ -39,36 +39,36 @@ class Profile extends Component {
     let { products, gotProducts } = this.state
     console.log('products> /', products)
     return (
-      <>
-        <article className="sidebar">
+      <div className="profile-container">
+        {/* <div className="sidebar">
           <img className="picture-profile" src="https://images.unsplash.com/photo-1518116486719-4f46886d9aab?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1100&q=80" alt="Picture Profile" />
           <h1>{username}'s Profile</h1>
-
-        </article>
+        </div> */}
         <div>
           {products.map(product => (
             <div
               key={product.id}
             >
               {product.user_id === this.state.currentUser.user_id ?
-                <div className="product-card"
+                <div className="product-card-on-Profile"
                   onClick={() => { this.edit(product.id) }}>
-                  <img className="product-image" alt={product.beanType} src={product.image} />
-                  <p>Origin: {product.geography}</p>
-                  <p>Altitude: {product.altura}</p>
-                  <p>Toast: {product.toast}</p>
-                  <p>Aroma: {product.aroma}</p>
-                  <p>Body: {product.body}</p>
-                  <p>Acidity: {product.acidity}</p>
+                  <img className="product-image-2" alt={product.beanType} src={product.image} />
+                  <div className="product-description">
+                    <p><b>Origin:</b> {product.geography}</p>
+                    <p><b>Altitude:</b> {product.altura}</p>
+                    <p><b>Toast:</b> {product.toast}</p>
+                    <p><b>Aroma:</b> {product.aroma}</p>
+                    <p><b>Body: </b>{product.body}</p>
+                    <p><b>Acidity:</b> {product.acidity}</p>
+                  </div>
                 </div>
 
                 : <></>
               }
-
             </div>
           ))}
         </div>
-      </>
+      </div>
     )
   }
 }

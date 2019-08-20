@@ -8,9 +8,9 @@ export default function Home() {
     <div>
       <div className="main-home-div">
         <div className="hero-image-div">
-          <img className="hero-image" src="https://images.unsplash.com/photo-1490106087286-bd050867d86e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80" alt="Home image" />
+          <img className="hero-image" src="https://images.unsplash.com/photo-1500353391678-d7b57979d6d2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2850&q=80" alt="Home image" />
           <p className="text-over-hero-img">
-            Discover Coffee</p>
+            <Link to='/board'>Discover Coffee</Link></p>
         </div>
         <div className="three-article-column">
           <div className="article-column">
