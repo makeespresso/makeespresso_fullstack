@@ -12,16 +12,16 @@ const Register = (props) => {
       <div className="mid-width">
         <h2>Create an account</h2>
         <form onSubmit={props.handleRegister} >
-          <p>Username:</p>
+          <p><b>Username:</b></p>
           <input name="username" type="text" value={props.formData.username} onChange={props.handleChange} />
-          <p>Email:</p>
+          <p><b>Email:</b></p>
           <input name="email" type="text" value={props.formData.email} onChange={props.handleChange} />
-          <p>Password:</p>
+          <p><b>Password:</b></p>
           <input name="password" type="password" value={props.formData.password} onChange={props.handleChange} />
-<br></br>
-        <button>Enter</button>
+          <br></br>
+          <button className="input-button" >Enter</button>
         </form>
-    </div>
+      </div>
     </div >
   );
 }

@@ -3,29 +3,31 @@ import { withRouter } from 'react-router-dom';
 
 function CreateProduct(props) {
   return (
+    <div className="create-product-page">
+      <h1>Create a new product</h1>
     <div className="create-form" >
-      <h2>Create a new product</h2>
       <form onSubmit={props.newProduct}>
-        <p>Upload Picture:</p>
+        <p><b>Upload Picture:</b></p>
         <input type="text" name="image" value={props.productForm.image} onChange={props.handleFormChange} />
-        <p>Coffee Type:</p>
+        <p><b>Coffee Type:</b></p>
         <input type="text" name="beanType" value={props.productForm.beanType} onChange={props.handleFormChange} />
-        <p>Geography:</p>
+        <p><b>Geography:</b></p>
         <input type="text" name="geography" value={props.productForm.geography} onChange={props.handleFormChange} />
-        <p>Altitude:</p>
+        <p><b>Altitude:</b></p>
         <input type="text" name="altura" value={props.productForm.altura} onChange={props.handleFormChange} />
-        <p>Toast:</p>
+        <p><b>Toast:</b></p>
         <input type="text" name="toast" value={props.productForm.toast} onChange={props.handleFormChange} />
-        <p>Aroma:</p>
+        <p><b>Aroma:</b></p>
         <input type="text" name="aroma" value={props.productForm.aroma} onChange={props.handleFormChange} />
-        <p>Body:</p>
+        <p><b>Body:</b></p>
         <input type="text" name="body" value={props.productForm.body} onChange={props.handleFormChange} />
-        <p>Acidity:</p>
+        <p><b>Acidity:</b></p>
         <input type="text" name="acidity" value={props.productForm.acidity} onChange={props.handleFormChange} />
-        <hr></hr>
-        <button>Submit</button>
+        <br />
+        <button className="input-button">Submit</button>
       </form>
-    </div >
+      </div >
+      </div>
   )
 }
 

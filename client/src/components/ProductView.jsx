@@ -57,7 +57,7 @@ class ProductView extends Component {
             <p>Acidity: {product.acidity}</p> */}
 
               {product.user_id === this.props.currentUser.user_id ?
-                <input TYPE="button" value="Edit Product" onClick={() => { this.goEdit(product.id) }}></input>
+                <input className="input-button" TYPE="button" value="Edit Product" onClick={() => { this.goEdit(product.id) }}></input>
                 : <></>
               }
 
@@ -68,7 +68,7 @@ class ProductView extends Component {
         <div className="product-create" onClick={() => { window.scrollTo(0, 0); }}>
           <span>Scroll up</span>
         </div>
-      </div>
+      </div >
 
     )
   }

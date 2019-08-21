@@ -13,6 +13,13 @@ class Profile extends Component {
 
     console.log(this.props)
   }
+  checkAndGo = () => {
+    if (this.props.currentUser) {
+      this.props.history.push('/new/product');
+    } else {
+      this.props.history.push('/new/product');
+    }
+  }
 
   async componentWillMount() {
     console.log('props', this.props)
@@ -40,16 +47,20 @@ class Profile extends Component {
     console.log('products> /', products)
     return (
       <div className="profile-container">
-        {/* <div className="sidebar">
+        <div className="sidebar">
           <img className="picture-profile" src="https://images.unsplash.com/photo-1518116486719-4f46886d9aab?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1100&q=80" alt="Picture Profile" />
           <h1>{username}'s Profile</h1>
-        </div> */}
+          <p>Add to board:</p>
+          <button className="create-product-button" onClick={this.checkAndGo}>Add Coffee</button>
+        </div>
         <div>
+          <h1>My Board</h1>
           {products.map(product => (
             <div
               key={product.id}
             >
               {product.user_id === this.state.currentUser.user_id ?
+
                 <div className="product-card-on-Profile"
                   onClick={() => { this.edit(product.id) }}>
                   <img className="product-image-2" alt={product.beanType} src={product.image} />

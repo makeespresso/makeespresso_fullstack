@@ -36,23 +36,27 @@ class ProductsView extends Component {
               )} />
               :
               <>
-                {this.props.currentUser.user_id === product.user_id && <p>Edit product:</p>}
-                <img className="product-image-on-ProductPage" alt={product.beanType} src={product.image} />
-                <p>Origin: {product.geography}</p>
-                <p>Altitude: {product.altura}</p>
-                <p>Toast: {product.toast}</p>
-                <p>Aroma: {product.aroma}</p>
-                <p>Body: {product.body}</p>
-                <p>Acidity: {product.acidity}</p>
+                {this.props.currentUser.user_id === product.user_id && <h1>Coffee view:</h1>}
+                <div className="product-card-on-Profile">
+                  <img className="product-image-2" alt={product.beanType} src={product.image} />
+                  <div className="product-description">
+                    <p><b>Origin:</b> {product.geography}</p>
+                    <p><b>Altitude:</b> {product.altura}</p>
+                    <p><b>Toast:</b> {product.toast}</p>
+                    <p><b>Aroma:</b> {product.aroma}</p>
+                    <p><b>Body:</b> {product.body}</p>
+                    <p><b>Acidity:</b> {product.acidity}</p>
+                  </div>
+                </div>
                 {this.props.currentUser.user_id === product.user_id &&
                   <>
-                    <button onClick={() => {
+                    <button className="input-button" onClick={() => {
                       this.setState({
                         isEdit: true
                       })
                       this.props.history.push(`/products/${product.id}/edit`)
                     }}>Edit</button>
-                    <button onClick={() => {
+                    <button className="input-button" onClick={() => {
                       this.props.deleteProduct(product.id);
                       this.props.history.push('/')
                     }}>Delete</button>

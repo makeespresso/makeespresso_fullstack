@@ -185,7 +185,7 @@ class App extends Component {
               <>
                 <small>Hi, <Link to='/profile'>{this.state.currentUser.username}</Link></small>
 
-                <button onClick={this.handleLogout}>logout</button>
+                <button className="input-button" onClick={this.handleLogout}>logout</button>
               </>
               :
               <img className="user-icon-login" onClick={this.handleLoginButton} src="https://img.icons8.com/pastel-glyph/64/000000/person-male.png" alt="User Login"></img>
