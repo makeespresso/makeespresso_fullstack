@@ -27,7 +27,7 @@ class ProductView extends Component {
         {this.props.currentUser ?
           <div className="product-create">
             <p>New discover:</p>
-            <button className="create-product-button" onClick={this.checkAndGo}>Add Coffee</button>
+            <button className="create-product-button" onClick={() => { this.checkAndGo() }}>Add Coffee</button>
           </div>
           : <></>
         }
@@ -49,14 +49,14 @@ class ProductView extends Component {
           >
             <div className="test">
               <img className="product-image" alt={product.beanType} src={product.image} />
-              <p>Origin: {product.geography}</p>
+              <p><b>Origin:</b> {product.geography}</p>
               {/* <p>Altitude: {product.altura}</p>
-            <p>Toast: {product.toast}</p>
-            <p>Aroma: {product.aroma}</p>
-            <p>Body: {product.body}</p>
-            <p>Acidity: {product.acidity}</p> */}
+              <p>Toast: {product.toast}</p>
+              <p>Aroma: {product.aroma}</p>
+              <p>Body: {product.body}</p>
+              <p>Acidity: {product.acidity}</p> */}
 
-              {product.user_id === this.props.currentUser.user_id ?
+              {this.props.currentUser !== null && product.user_id === this.props.currentUser.user_id ?
                 <input className="input-button" TYPE="button" value="Edit Product" onClick={() => { this.goEdit(product.id) }}></input>
                 : <></>
               }

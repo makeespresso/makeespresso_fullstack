@@ -52,9 +52,9 @@ class App extends Component {
         currentUser: user
       })
     }
-    else {
-      this.props.history.push('/login');
-    }
+    // else {
+    //   this.props.history.push('/login');
+    // }
   }
 
 
@@ -192,9 +192,6 @@ class App extends Component {
               // <button className="login-button" onClick={this.handleLoginButton}>Login</button>
             }
           </div>
-
-
-
         </section>
         <section className="container">
           <Route exact path="/login" render={() => (
