@@ -231,12 +231,21 @@ align-self: auto;
   right:80%
 }
 .product-scroll{
-  border: solid .03px gray;
-    background: whitesmoke;
-    margin: 10px 0 10px 0;
+  /* border: solid .03px gray;
+    background: black;
+    color: whitesmoke;
+    margin: 20px 5px 20px 0;
     position: fixed;
-    width: 100vw;
+    width: 10vw;
+    padding: 20px;
+    text-align: center;
+    bottom:0; */
+    /* margin: 20px 5px 20px 0; */
+    position: fixed;
+    width: 8vw;
+    padding: 20px;
     bottom:0;
+    margin-left: 80%;
   }
 .create-product-button{
 background-color: rgba(241, 236, 232);

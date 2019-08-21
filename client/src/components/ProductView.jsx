@@ -74,10 +74,10 @@ class ProductView extends Component {
             </div>
           ))}
         </div>
-
-        <div className="product-scroll" onClick={() => { window.scrollTo(0, 0); }}>
+        <img className="product-scroll" onClick={() => { window.scrollTo(0, 0); }} src="https://image.flaticon.com/icons/png/512/25/25649.png" />
+        {/* <div className="product-scroll" onClick={() => { window.scrollTo(0, 0); }}>
           <span>Scroll up</span>
-        </div>
+        </div> */}
       </div >
 
     )
