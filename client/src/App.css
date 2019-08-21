@@ -63,16 +63,22 @@ width: 100vw;
   width: 100%;
 }
 .text-over-hero-img{
+  background-color: rgb(230, 216, 209, 0.6);
+  padding: 30px;
   position: absolute;
   top: 40%;
   z-index: 100;
   transform: translateY(-70%);
   width: calc(30vw - 40px);
   text-align: center;
-  color: white;
   font-size: 3rem;
   margin-left: 5%;
 }
+
+a{
+  text-decoration: none;
+}
+
 
 .article-column:hover .text-over-column-image{
 	text-align:justify;
