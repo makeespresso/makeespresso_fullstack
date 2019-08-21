@@ -10,7 +10,7 @@ const Login = (props) => {
         <img className="welcome-img" src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2850&q=80" alt="Welcome Image"></img>
       </div>
 
-      <div className="third-width">
+      <div style={{ width: "30%", height: "50%", backgroundColor: "rgba(241, 236, 232)", zIndex: "5" }} className="third-width edit-page">
 
         <h1>Welcome Back!</h1>
         <p>Log into your account below</p>

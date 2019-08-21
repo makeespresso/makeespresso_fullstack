@@ -53,32 +53,29 @@ class Profile extends Component {
           <p>Add to board:</p>
           <button className="create-product-button" onClick={this.checkAndGo}>Add Coffee</button>
         </div>
-        <div>
-          <h1>My Board</h1>
-          {products.map(product => (
-            <div
-              key={product.id}
-            >
-              {product.user_id === this.state.currentUser.user_id ?
 
-                <div className="product-card-on-Profile"
-                  onClick={() => { this.edit(product.id) }}>
-                  <img className="product-image-2" alt={product.beanType} src={product.image} />
-                  <div className="product-description">
-                    <p><b>Origin:</b> {product.geography}</p>
+        <div className='profile-board'>
+          {products.map(product => (
+            product.user_id === this.state.currentUser.user_id ?
+              <div className="product-card-on-Profile"
+                onClick={() => { this.edit(product.id) }}>
+                <img className="product-image-2" alt={product.beanType} src={product.image} />
+                <div className="product-description">
+                  <p><b>Origin:</b> {product.geography}</p>
+                  {/*
                     <p><b>Altitude:</b> {product.altura}</p>
                     <p><b>Toast:</b> {product.toast}</p>
                     <p><b>Aroma:</b> {product.aroma}</p>
                     <p><b>Body: </b>{product.body}</p>
-                    <p><b>Acidity:</b> {product.acidity}</p>
-                  </div>
+                    <p><b>Acidity:</b> {product.acidity}</p> */}
                 </div>
+              </div>
 
-                : <></>
-              }
-            </div>
+              : <></>
+
           ))}
         </div>
+
       </div>
     )
   }

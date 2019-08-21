@@ -142,45 +142,73 @@ height: 40%;
 
 /* COMPONENT Profile = article */
 .profile-container{
-  height: 1200px;
-  width: 100vw;
   background-color: #f5f5f5;
   background-image: url("https://www.transparenttextures.com/patterns/stardust.png");
-  display: flex;
+  /* height:calc(100vh - 3rem); */
+  display:flex;
+  flex-flow: row;
 }
 .profile-container h1{
   text-align: center;
 }
 .sidebar{
   background: rgb(230, 216, 209);
-  
+  width: calc(20% - 1rem);
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-flow: column;
+  padding: .5rem;
 } 
+
+.sidebar h1 {
+  text-align: center;
+}
 .picture-profile{
   border-radius: 100%;
   height: 20vh;
+  width: 20vh;
 } 
-.product-card-on-Profile{
-  display: inline;
-  height: auto;
-  width: 30vw;
-  min-height: 333.3px;
-  min-width: 368.63px;
-  background-color: rgb(230, 216, 209);
+.profile-board{
+  height: 100%;
+  width:calc(80% - 1rem);
+  height:100%;
   display: flex;
-  align-items: flex-start;
-  flex-direction: column;
-  align-self: center;
-  justify-content: center;
+  align-items: center;
+  justify-content: flex-start;
+  flex-flow: row wrap;
+  padding: .5rem;
+}
+.products-org{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-flow: row wrap;
+}
+.product-card-on-Profile{
+  display: flex;
+  /* align-items: center; */
+  justify-content: space-around;
+  flex-flow: column;
+  height: auto;
+  width: 25%;
+  min-width: 10rem;
+  min-height: 10rem;
+  background-color: rgb(230, 216, 209, 0.6);
+  padding: 10px;
   margin: 10px;
+  font-size: 1rem;
+}
+.productView{
+  width: auto;
 }
 
 .product-image-2{
-  object-fit: fill;
-  height: 50vh;
-  width: 90%;
-  align-content: center;
-  box-shadow: #000000 10px 20px;
-  margin: 10px;
+  object-fit: cover;
+  height: 40%;
+  width: 100%;
+  box-shadow: #787878 -6px 6px  ;
   /* background-color: white; */
 }
 
@@ -198,10 +226,18 @@ align-self: auto;
   flex-direction: column;
 }
 .product-create{
-border: solid .03px gray;
-  background: whitesmoke;
-  margin: 10px 0 10px 0;
+  position: absolute;
+  top:60%;
+  right:80%
 }
+.product-scroll{
+  border: solid .03px gray;
+    background: whitesmoke;
+    margin: 10px 0 10px 0;
+    position: fixed;
+    width: 100vw;
+    bottom:0;
+  }
 .create-product-button{
 background-color: rgba(241, 236, 232);
 font-size: 1em;
@@ -211,22 +247,24 @@ padding: 20px;
 margin: 20px;
 }
 .test{
-max-width: 275px;
-background-color: rgba(241, 236, 232);
-width: 50vw;
-padding: 10px;
-margin: 20px;
+  max-width: 275px;
+  background-color: rgba(241, 236, 232);
+  width: 50vw;
+  padding: 10px;
+  margin: 2px;
+  border-radius: 5px;
 }
-.product-card{
-  height: auto;
-  width: auto;
-  border: solid 8px white;
-  display:flex;
-  align-items: flex-start;
-  flex-direction: column;
-  align-self: center;
-  justify-content: center;
-  margin: 10px;
+
+.product-card {
+    /* height: auto; */
+    /* width: auto; */
+    display: flex;
+    align-items: flex-start;
+    /* flex-direction: row; */
+    /* align-self: center; */
+    justify-content: center;
+    /* margin: 10px; */
+    /* flex-flow: row wrap; */
 }
 
 .product-card p {
@@ -237,7 +275,7 @@ margin: 20px;
 text-align: center;
 background-color: #000000;
 color: white;
-margin: 5px;
+margin: .5px;
 padding: 10px;
 }
 .product-image{
@@ -248,9 +286,16 @@ padding: 10px;
 
 
 /* COMPONENT ProductPage = product-image-on-ProductPage */
-.product-page{
+.product-page {
   background-color: #f5f5f5;
-  background-image: url("https://www.transparenttextures.com/patterns/stardust.png");
+  background-image: url(https://www.transparenttextures.com/patterns/stardust.png);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  /* align-self: center; */
+  justify-content: center;
+  height: auto;
+  min-height: calc(100vh - 3rem);
 }
 .product-page h1{
   text-align: center;
@@ -262,14 +307,20 @@ height: 50vh;
 /* COMPONENT Register*/
 
 .register-container{
+z-index: 0;
+height: calc(100vh - 3rem);
 display: flex;
 justify-content: center;
+align-items: center;
 background-color: #f5f5f5;
 background-image: url("https://www.transparenttextures.com/patterns/stardust.png");
 }
 
 .register-image{
+  width: 60%;
+  height: 100%;
   object-fit:cover;
+  z-index: 0;
 }
 .mid-width{
   border: solid 1px black;
@@ -296,20 +347,59 @@ height: 100%;
 }
 
 /*COMPONENT: EditProduct*/
+
+.edit-form{
+  background: rgba(230, 216, 209, .6);
+  margin:1rem;
+  width: 25%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+form{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  width:90%;
+  padding: .5rem 0 1rem 0;
+}
+
+form input[type=text] ,form input[type=password], form input[type=email]{
+  width: 100%;
+  padding: 4px 6px;
+  margin: 2px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+form span{
+  align-self: flex-start;
+  margin-top: .5rem;
+}
+
 .edit-page{
   margin: 0 auto;
   width: 100vw;
-  height: 100vh;
+  height: calc(100vh - 3rem);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
   background-color: #f5f5f5;
   background-image: url("https://www.transparenttextures.com/patterns/stardust.png");
 }
 .edit-page h1{
   text-align: center;
+  
 }
-.edit-form{
+/* .edit-form{
   background: rgba(230, 216, 209);
   width: 50%;
-}
+} */
 
 /*COMPONENT: CreateProduct*/
 

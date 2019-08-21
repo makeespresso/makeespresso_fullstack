@@ -4,6 +4,16 @@ import { thisTypeAnnotation } from '@babel/types';
 
 class ProductView extends Component {
 
+  detailView = (id) => {
+    if (this.props.currentUser) {
+      console.log(id)
+      this.props.history.push('/products/' + id);
+    } else {
+      this.props.history.push('/login');
+    }
+  }
+
+
   checkAndGo = () => {
     if (this.props.currentUser) {
       this.props.history.push('/new/product');
@@ -25,8 +35,7 @@ class ProductView extends Component {
 
         {/* Add a new product bar appears only if there's a logged user */}
         {this.props.currentUser ?
-          <div className="product-create">
-            <p>New discover:</p>
+          <div className="text-over-hero-img">
             <button className="create-product-button" onClick={() => { this.checkAndGo() }}>Add Coffee</button>
           </div>
           : <></>
@@ -40,32 +49,33 @@ class ProductView extends Component {
           onClick={this.checkAndGo(`/products/${product.id}/edit`)}>
           <button onClick={this.checkAndGo}>Add a new product</button>
         </div> */}
-
-        {this.props.products.map(product => (
-          <div
-            key={product.id}
-            className="product-card"
-            onClick={() => { this.props.history.push('/products/' + product.id) }}
-          >
-            <div className="test">
-              <img className="product-image" alt={product.beanType} src={product.image} />
-              <p><b>Origin:</b> {product.geography}</p>
-              {/* <p>Altitude: {product.altura}</p>
+        <div style={{ width: "100%" }} className="products-org">
+          {this.props.products.map(product => (
+            <div
+              key={product.id}
+              className=""
+              onClick={() => { this.detailView(product.id) }}
+            >
+              <div className="test">
+                <img className="product-image" alt={product.beanType} src={product.image} />
+                <p><b>Origin:</b> {product.geography}</p>
+                {/* <p>Altitude: {product.altura}</p>
               <p>Toast: {product.toast}</p>
               <p>Aroma: {product.aroma}</p>
               <p>Body: {product.body}</p>
               <p>Acidity: {product.acidity}</p> */}
 
-              {this.props.currentUser !== null && product.user_id === this.props.currentUser.user_id ?
-                <input className="input-button" TYPE="button" value="Edit Product" onClick={() => { this.goEdit(product.id) }}></input>
-                : <></>
-              }
+                {this.props.currentUser !== null && product.user_id === this.props.currentUser.user_id ?
+                  <input className="input-button" TYPE="button" value="Edit Product" onClick={() => { this.goEdit(product.id) }}></input>
+                  : <></>
+                }
 
+              </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
 
-        <div className="product-create" onClick={() => { window.scrollTo(0, 0); }}>
+        <div className="product-scroll" onClick={() => { window.scrollTo(0, 0); }}>
           <span>Scroll up</span>
         </div>
       </div >
