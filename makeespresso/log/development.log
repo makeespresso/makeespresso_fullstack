@@ -45543,3 +45543,10 @@ Processing by ProductsController#index as HTML
 Completed 200 OK in 14ms (Views: 12.5ms | ActiveRecord: 0.5ms)
 
 
+Started GET "/products" for ::1 at 2019-08-21 01:43:36 -0400
+Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:7
+Completed 200 OK in 12ms (Views: 10.9ms | ActiveRecord: 0.5ms)
+
+
